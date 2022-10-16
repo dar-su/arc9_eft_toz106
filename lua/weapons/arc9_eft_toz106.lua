@@ -296,7 +296,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     end
 
     if anim == "fix" then
-        rand = math.Truncate(util.SharedRandom("hi", 0, 4.99))
+        local rand = math.Truncate(util.SharedRandom("hi", 0, 4.99))
 
         if ARC9EFTBASE then
             net.Start("arc9eftjam")
