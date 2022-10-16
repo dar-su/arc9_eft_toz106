@@ -99,7 +99,7 @@ SWEP.HeatLockout = false
 
 SWEP.Malfunction = true 
 SWEP.MalfunctionCycle = true 
-SWEP.MalfunctionMeanShotsToFail = 2
+SWEP.MalfunctionMeanShotsToFail = 9
 
 --          Firemodes
 
