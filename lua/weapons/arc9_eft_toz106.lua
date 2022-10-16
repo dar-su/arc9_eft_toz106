@@ -91,7 +91,15 @@ SWEP.RecoilKickDamping = 10
 
 --          Heating
 
-SWEP.Overheat = false
+
+SWEP.Overheat = true
+SWEP.HeatCapacity = 90
+SWEP.HeatDissipation = 6
+SWEP.HeatLockout = false
+
+SWEP.Malfunction = true 
+SWEP.MalfunctionCycle = true 
+SWEP.MalfunctionMeanShotsToFail = 2
 
 --          Firemodes
 
@@ -551,76 +559,143 @@ SWEP.Animations = {
 
 
     ["jam0"] = {
-        Source = {"misfire_0", "misfire_1"}, -- misfire
-        EventTable = {
-            { s = randspin, t = 0.22 },            
-            { s = path.."saiga_slider_up.wav", t = 0.79},
-            { s = path.."saiga_slider_down.wav", t = 1.04},
-            { s = randspin, t = 1.41 },        
+        Source = "misfire", -- misfire
+        IKTimeLine = {
+            { t = 0, lhik = 1, rhik = 1 },
+            { t = 0.2, lhik = 1, rhik = 0 },
+            { t = 0.45, lhik = 1, rhik = 0 },
+            { t = 0.84, lhik = 1, rhik = 1 },
+            { t = 1, lhik = 1, rhik = 1 },
         },
-        EjectAt = 0.88
+        EventTable = { 
+            { s = randspin, t = 0.18 },
+            { s = path .. "toz_boltin.wav", t = 0.27 },
+            { s = path .. "toz_boltout.wav", t = 0.55 },
+            { s = randspin, t = 0.85 },
+        },
+        EjectAt = 0.6
     },
     ["jam2"] = {
         Source = "jam_feed", -- jam feed
         EventTable = {
-            { s = randspin, t = 2/24 },
-            { s = randspin, t = 12/24 },
-            { s = path .. "ak_jam_stuckbolt_in_starting.wav", t = 0.44 },
-            { s = path .. "saiga_slider_jam.wav", t = 0.86 },
-            { s = path .. "saiga_slider_up.wav", t = 1.14 },
-            { s = randspin, t = 1.43 },
-            { s = randspin, t = 1.66 },
-            { s = path .. "saiga_round_in_chamber.wav", t = 2.13 },
-            { s = randspin, t = 2.55 },
-            { s = path .. "saiga_slider_down.wav", t = 2.96 },
-            { s = randspin, t = 3.5 },
+            { s = randspin, t = 0.18 },
+            { s = path .. "toz_boltin.wav", t = 0.28 },
+            { s = path .. "sv98_jam3.wav", t = 0.55 },
+            { s = randspin, t = 0.76 },
+            { s = path .. "sv98_jam4.wav", t = 1.28 },
+            { s = randspin, t = 1.73 },
+            { s = randspin, t = 2.17 },
+            { s = randspin, t = 2.54 },
+            { s = path .. "saiga_round_out.wav", t = 3.14 },
+            { s = randspin, t = 3.96 },
+            { s = path .. "toz_boltout.wav", t = 4.37 },
+            { s = randspin, t = 5.05 },
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1, rhik = 1 },
+            { t = 0.05, lhik = 1, rhik = 0 },
+            { t = 0.88, lhik = 1, rhik = 0 },
+            { t = 0.96, lhik = 1, rhik = 1 },
+            { t = 1, lhik = 1, rhik = 1 },
         },
     },
     ["jam3"] = {
-        Source = "jam_hardjam", -- jam hard
+        Source = "jam_hard", -- jam hard
         EventTable = {
-            { s = randspin, t = 0.16 },
-            { s = path .. "ak_jam_stuckbolt_in_starting.wav", t = 0.48 },
-            { s = randspin, t = 0.84 },
-            { s = path .. "ak_jam_stuckbolt_in1.wav", t = 0.85 },
-            { s = path .. "ak_jam_stuckbolt_in2.wav", t = 1.35 },
-            { s = randspin, t = 1.74 },
-            { s = path .. "ak_jam_stuckbolt_out_hit3.wav", t = 2.22 },
-            { s = path .. "ak_jam_stuckbolt_out_hit2.wav", t = 2.73 },
-            { s = randspin, t = 3.13 },
-            { s = path .. "ak_jam_stuckbolt_in_starting.wav", t = 3.27 },
-            { s = path .. "saiga_slider_up.wav", t = 4.09 },
-            { s = path .. "saiga_round_in_chamber.wav", t = 4.21 },
-            { s = path .. "saiga_slider_down.wav", t = 4.38 },
-            { s = randspin, t = 4.84 },
+            { s = randspin, t = 0.07 },
+            { s = path .. "sv98_jam2.wav", t = 0.52 },
+            { s = path .. "sv98_jam1.wav", t = 1.12 },
+            { s = randspin, t = 1.57 },
+            { s = randspin, t = 1.96 },
+            { s = randspin, t = 2.73 },
+            { s = path .. "sv98_jam2.wav", t = 3.56 },
+            { s = randspin, t = 3.58 },
+            { s = path .. "sv98_jam1.wav", t = 3.94 },
+            { s = randspin, t = 4.28 },
+            { s = randspin, t = 5.19 },
+            { s = randspin, t = 5.67 },
+            { s = path .. "sv98_jam1.wav", t = 5.71 },
+            { s = randspin, t = 6.12 },
+            { s = path .. "sv98_jam2.wav", t = 6.13 },
+            { s = randspin, t = 6.79 },
+            { s = path .. "sv98_jam5_slideout.wav", t = 6.88 },
+            { s = path .. "toz_boltin.wav", t = 7.23 },
+            { s = path .. "toz_boltout.wav", t = 7.63 },
+            { s = randspin, t = 8.28 },
         },
-        EjectAt = 4.21
+        IKTimeLine = {
+            { t = 0,    lhik = 1, rhik = 1 },
+            { t = 0.03, lhik = 1, rhik = 1 },
+            { t = 0.13, lhik = 1, rhik = 0 },
+            { t = 0.18, lhik = 1, rhik = 1 },
+            { t = 0.21, lhik = 1, rhik = 1 },
+            { t = 0.23, lhik = 0, rhik = 1 },
+            { t = 0.33, lhik = 0, rhik = 1 },
+            { t = 0.35, lhik = 1, rhik = 0 },
+            { t = 0.93, lhik = 1, rhik = 0 },
+            { t = 0.95, lhik = 1, rhik = 1 },
+            { t = 1,    lhik = 1, rhik = 1 },
+        },
+        EjectAt = 7.35
     },
     ["jam4"] = {
-        Source = "jam_softjam", -- jam soft
+        Source = "jam_soft", -- jam soft
         EventTable = {
-            { s = randspin, t = 0.18 },
-            { s = path .. "ak_jam_stuckbolt_in_starting.wav", t = 0.53 },
-            { s = path .. "ak_jam_stuckbolt_in3.wav", t = 0.85 },
-            { s = path .. "ak_jam_stuckbolt_in2.wav", t = 1.23 },
-            { s = randspin, t = 1.76 },
-            { s = path .. "saiga_slider_up.wav", t = 2.13 },
-            { s = path .. "saiga_slider_down.wav", t = 2.55 },
-            { s = randspin, t = 2.8 },
-        }
+            { s = randspin, t = 0.07 },
+            { s = path .. "sv98_jam2.wav", t = 0.52 },
+            { s = path .. "sv98_jam1.wav", t = 1.12 },
+            { s = randspin, t = 1.57 },
+            { s = randspin, t = 1.96 },
+            { s = randspin, t = 2.73 },
+            { s = randspin, t = 3.28 },
+            { s = randspin, t = 3.87 },
+            { s = path .. "sv98_jam2.wav", t = 3.88 },
+            { s = randspin, t = 4.38 },
+            { s = path .. "sv98_jam1.wav", t = 4.4 },
+            { s = path .. "sv98_jam5_slideout.wav", t = 5.1 },
+            { s = path .. "toz_boltin.wav", t = 5.46 },
+            { s = path .. "toz_boltout.wav", t = 5.87 },
+            { s = randspin, t = 6.5 },
+        },
+        IKTimeLine = {
+            { t = 0,    lhik = 1, rhik = 1 },
+            { t = 0.05, lhik = 1, rhik = 1 },
+            { t = 0.18, lhik = 1, rhik = 0 },
+            { t = 0.24, lhik = 1, rhik = 1 },
+            { t = 0.29, lhik = 1, rhik = 1 },
+            { t = 0.31, lhik = 0, rhik = 1 },
+            { t = 0.43, lhik = 0, rhik = 1 },
+            { t = 0.46, lhik = 1, rhik = 1 },
+            { t = 0.48, lhik = 1, rhik = 1 },
+            { t = 0.51, lhik = 1, rhik = 0 },
+            { t = 0.92, lhik = 1, rhik = 0 },
+            { t = 0.95, lhik = 1, rhik = 1 },
+            { t = 1,    lhik = 1, rhik = 1 },
+        },
+        EjectAt = 5.64
     },
     ["jam1"] = {
         Source = "jam_shell", -- jam shell
         EventTable = {
-            { s = randspin, t = 0.1 },
-            { s = path .. "ak_jam_stuckbolt_in_starting.wav", t = 0.48 },
-            { s = path .. "saiga_slider_check.wav", t = 0.73 },
-            { s = randspin, t = 0.97 },
-            { s = randspin, t = 1.2 },
-            { s = randspin, t = 1.67 },
-            { s = randspin, t = 1.59 },
-            { s = path .. "saiga_slider_down.wav", t = 1.96 },
-            { s = randspin, t = 2.35 },
+            { s = randspin, t = 0.18 },
+            { s = path .. "toz_boltin.wav", t = 0.28 },
+            { s = path .. "sv98_jam3.wav", t = 0.53 },
+            { s = randspin, t = 0.76 },
+            { s = path .. "sv98_jam4.wav", t = 1.26 },
+            { s = randspin, t = 1.74 },
+            { s = randspin, t = 2.13 },
+            { s = path .. "saiga_round_out.wav", t = 2.4 },
+            { s = randspin, t = 2.42 },
+            { s = path .. "toz_boltout.wav", t = 2.57 },
+            { s = randspin, t = 3.22 },
+        },
+        IKTimeLine = {
+            { t = 0,    lhik = 1, rhik = 1 },
+            { t = 0.04, lhik = 1, rhik = 1 },
+            { t = 0.06, lhik = 1, rhik = 0 },
+            { t = 0.85, lhik = 1, rhik = 0 },
+            { t = 0.89, lhik = 1, rhik = 1 },
+            { t = 1,    lhik = 1, rhik = 1 },
         },
     },
 

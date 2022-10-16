@@ -1,6 +1,6 @@
 ATT.PrintName = "20/70 7.3mm buckshot"
 ATT.CompactName = "7.3mm"
-ATT.Icon = Material("entities/eft_attachments/stocks/eft_stock_ar_magpulmoe.png", "mips smooth")
+ATT.Icon = Material("entities/eft_toz106_attachments/20ga_std.png", "mips smooth")
 ATT.Description = [[A 20/70 gauge shell loaded with 7.3mm buckshot.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - EFT Attachments"

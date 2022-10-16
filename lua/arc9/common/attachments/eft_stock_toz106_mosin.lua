@@ -1,6 +1,6 @@
 ATT.PrintName = "TOZ-106 custom cut Mosin stock"
 ATT.CompactName = "TOZ106 Mosin"
-ATT.Icon = Material("entities/eft_glock_attachments/barrel_aw.png", "mips smooth")
+ATT.Icon = Material("entities/eft_toz106_attachments/mosin.png", "mips smooth")
 ATT.Description = [[A custom-made stock for the TOZ-106 hunting shotgun, made from the Mosin rifle stock base. It was made by ancient Russian dark magic called "Napiling".]]
 
 ATT.SortOrder = 0

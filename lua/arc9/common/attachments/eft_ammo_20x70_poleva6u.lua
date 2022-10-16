@@ -1,6 +1,6 @@
 ATT.PrintName = "20/70 \"Poleva-6u\" slug"
 ATT.CompactName = "Poleva-6u"
-ATT.Icon = Material("entities/eft_attachments/stocks/eft_stock_ar_magpulmoe.png", "mips smooth")
+ATT.Icon = Material("entities/eft_toz106_attachments/20ga_p6u.png", "mips smooth")
 ATT.Description = [[A "Poleva-6u" 20/70 FMJ slug shell for 20 gauge shotguns.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - EFT Attachments"

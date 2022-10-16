@@ -1,6 +1,6 @@
 ATT.PrintName = "TOZ-106 dovetail mount"
 ATT.CompactName = "106 DT"
-ATT.Icon = Material("entities/eft_glock_attachments/barrel_aw.png", "mips smooth")
+ATT.Icon = Material("entities/eft_toz106_attachments/dove.png", "mips smooth")
 ATT.Description = [[A dovetail mount for TOZ-106 bolt-action shotgun, allows installing the scope mount.]]
 
 ATT.SortOrder = 0

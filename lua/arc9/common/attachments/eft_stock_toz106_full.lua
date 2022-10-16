@@ -1,6 +1,6 @@
 ATT.PrintName = "MTs 20-01 stock"
 ATT.CompactName = "MTs 20-01"
-ATT.Icon = Material("entities/eft_glock_attachments/barrel_aw.png", "mips smooth")
+ATT.Icon = Material("entities/eft_toz106_attachments/mts.png", "mips smooth")
 ATT.Description = [[A standard stock for MTs 20-01 hunting rifles, but can be also installed on various different shotguns including the bolt-action TOZ-106.]]
 
 ATT.SortOrder = 0

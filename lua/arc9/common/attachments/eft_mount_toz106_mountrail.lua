@@ -1,6 +1,6 @@
 ATT.PrintName = "TOZ-106 rail scope mount"
 ATT.CompactName = "106 mount"
-ATT.Icon = Material("entities/eft_glock_attachments/barrel_aw.png", "mips smooth")
+ATT.Icon = Material("entities/eft_toz106_attachments/mount.png", "mips smooth")
 ATT.Description = [[A universal Weaver rail mount for TOZ-106. Provides a rail that allows installing various scopes on the weapon. Requires a dovetail mount.]]
 
 ATT.SortOrder = 0

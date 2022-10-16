@@ -1,6 +1,6 @@
 ATT.PrintName = "TOZ-106 stock"
 ATT.CompactName = "TOZ106"
-ATT.Icon = Material("entities/eft_glock_attachments/barrel_aw.png", "mips smooth")
+ATT.Icon = Material("entities/eft_toz106_attachments/stock.png", "mips smooth")
 ATT.Description = [[A standard-issue stock with a folding shoulder piece for the TOZ-106 hunting shotgun.]]
 
 ATT.SortOrder = 0

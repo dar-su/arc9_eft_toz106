@@ -1,6 +1,6 @@
 ATT.PrintName = "TOZ-106 20ga MTs 20-01 Sb.3 5-shot magazine"
 ATT.CompactName = "Sb.3x5"
-ATT.Icon = Material("entities/eft_glock_attachments/barrel_aw.png", "mips smooth")
+ATT.Icon = Material("entities/eft_toz106_attachments/mag5.png", "mips smooth")
 ATT.Description = [[A 5-shot 20ga magazine for MTs 20-01 and TOZ-106 hunting shotguns.]]
 
 ATT.SortOrder = 0
