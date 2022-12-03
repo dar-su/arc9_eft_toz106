@@ -4,7 +4,7 @@ ATT.Icon = Material("entities/eft_toz106_attachments/mount.png", "mips smooth")
 ATT.Description = [[A universal Weaver rail mount for TOZ-106. Provides a rail that allows installing various scopes on the weapon. Requires a dovetail mount.]]
 
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - EFT Attachments"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Attachments = {
     {
         PrintName = "Optic",

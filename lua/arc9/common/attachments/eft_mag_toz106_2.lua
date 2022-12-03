@@ -4,7 +4,7 @@ ATT.Icon = Material("entities/eft_toz106_attachments/mag2.png", "mips smooth")
 ATT.Description = [[A 2-shot 20 gauge magazine for MTs 20-01 and TOZ-106 hunting shotguns.]]
 
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - EFT Attachments"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.ChamberSize = 1
 ATT.ClipSize = 2

@@ -2,7 +2,7 @@ AddCSLuaFile()
 
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true
-SWEP.Category = "ARC-9 - Escape From Tarkov"
+SWEP.Category = "ARC9 - Escape From Tarkov"
 SWEP.Credits = { Author1 = "Darsu", Assets2 = "Battlestate Games LTD", General_help3 = "Mal0", ARC9_Base4 = "Arctic" }
 
 SWEP.PrintName = "TOZ-106"

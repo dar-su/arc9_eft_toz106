@@ -4,7 +4,7 @@ ATT.Icon = Material("entities/eft_toz106_attachments/dove.png", "mips smooth")
 ATT.Description = [[A dovetail mount for TOZ-106 bolt-action shotgun, allows installing the scope mount.]]
 
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - EFT Attachments"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Attachments = {
     {
         PrintName = "Scope mount",

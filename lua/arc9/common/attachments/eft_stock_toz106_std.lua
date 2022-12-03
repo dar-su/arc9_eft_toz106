@@ -4,7 +4,7 @@ ATT.Icon = Material("entities/eft_toz106_attachments/stock.png", "mips smooth")
 ATT.Description = [[A standard-issue stock with a folding shoulder piece for the TOZ-106 hunting shotgun.]]
 
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - EFT Attachments"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_toz106_stock"}
 ATT.ActivateElements = {"unfolded"}
