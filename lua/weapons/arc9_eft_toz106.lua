@@ -3,6 +3,7 @@ AddCSLuaFile()
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Escape From Tarkov"
+SWEP.SubCategory = "Shotguns"
 SWEP.Credits = { Author1 = "Darsu", Assets2 = "Battlestate Games LTD", General_help3 = "Mal0", ARC9_Base4 = "Arctic" }
 
 SWEP.PrintName = "TOZ-106"
@@ -70,15 +71,15 @@ SWEP.RecoilResetTime = 0.05
 
 SWEP.UseVisualRecoil = true 
 SWEP.VisualRecoil = 2
-SWEP.VisualRecoilMultHipFire = 8
-SWEP.VisualRecoilMultSights = 4
+SWEP.VisualRecoilMultHipFire = 4
+SWEP.VisualRecoilMultSights = 2
 
 SWEP.VisualRecoilCenter = Vector(2, 4, 2)
 SWEP.VisualRecoilUp = 1.1 -- Vertical tilt
 SWEP.VisualRecoilSide = 0.01 -- Horizontal tilt
 SWEP.VisualRecoilRoll = 2 -- Roll tilt
 
-SWEP.VisualRecoilPunch = 3 -- How far back visual recoil moves the gun
+SWEP.VisualRecoilPunch = 2 -- How far back visual recoil moves the gun
 SWEP.VisualRecoilPunchMultSights = 1
 SWEP.VisualRecoilPositionBump = 3
 
@@ -345,12 +346,12 @@ local rik_magcheck = {
     { t = 1, lhik = 1, rhik = 1 },
 }
 
-local randspin = {"eft_shared/weapon_generic_rifle_spin1.wav","eft_shared/weapon_generic_rifle_spin2.wav","eft_shared/weapon_generic_rifle_spin3.wav","eft_shared/weapon_generic_rifle_spin4.wav","eft_shared/weapon_generic_rifle_spin5.wav","eft_shared/weapon_generic_rifle_spin6.wav","eft_shared/weapon_generic_rifle_spin7.wav","eft_shared/weapon_generic_rifle_spin8.wav","eft_shared/weapon_generic_rifle_spin9.wav","eft_shared/weapon_generic_rifle_spin10.wav"}
+local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.wav","arc9_eft_shared/weapon_generic_rifle_spin2.wav","arc9_eft_shared/weapon_generic_rifle_spin3.wav","arc9_eft_shared/weapon_generic_rifle_spin4.wav","arc9_eft_shared/weapon_generic_rifle_spin5.wav","arc9_eft_shared/weapon_generic_rifle_spin6.wav","arc9_eft_shared/weapon_generic_rifle_spin7.wav","arc9_eft_shared/weapon_generic_rifle_spin8.wav","arc9_eft_shared/weapon_generic_rifle_spin9.wav","arc9_eft_shared/weapon_generic_rifle_spin10.wav"}
 
 local rst_single = {
     { s = randspin, t = 0.18 },
     { s = path .. "toz_boltin.wav", t = 0.68 },
-    { s = "eft_shared/weap_handoff.wav", t = 0.8 },
+    { s = "arc9_eft_shared/weap_handoff.wav", t = 0.8 },
     { s = randspin, t = 1.43 },
     { s = path .. "saiga_round_in_chamber.wav", t = 1.64 },
     { s = path .. "toz_boltin.wav", t = 2.24 },
@@ -361,8 +362,8 @@ local rst_def = {
     { s = randspin, t = 0.25 },
     { s = path .. "sv98_mag_out.wav", t = 0.77 },
     { s = randspin, t = 1.42 },
-    { s = "eft_shared/weap_magin_sbrosnik.wav", t = 1.62 },
-    { s = "eft_shared/weap_mag_pullout.wav", t = 1.92 },
+    { s = "arc9_eft_shared/weap_magin_sbrosnik.wav", t = 1.62 },
+    { s = "arc9_eft_shared/weap_mag_pullout.wav", t = 1.92 },
     { s = randspin, t = 2.02 },
     { s = path .. "sv98_mag_in.wav", t = 2.38 },
     { s = randspin, t = 3.19 },
@@ -374,7 +375,7 @@ local rst_empty = {
     { s = randspin, t = 0.64 },
     { s = path .. "sv98_mag_out.wav", t = 1.26 },
     { s = randspin, t = 1.82 },
-    { s = "eft_shared/weap_mag_pullout.wav", t = 2.35 },
+    { s = "arc9_eft_shared/weap_mag_pullout.wav", t = 2.35 },
     { s = randspin, t = 2.35 },
     { s = path .. "sv98_mag_in.wav", t = 2.75 },
     { s = randspin, t = 3.9 },
@@ -404,15 +405,15 @@ SWEP.Animations = {
             { t = 1, lhik = 1, rhik = 1 },
         },
         EventTable = { 
-            { s = "eft_shared/weap_in.wav", t = 0 },
+            { s = "arc9_eft_shared/weap_in.wav", t = 0 },
             { s = path .. "toz_boltin.wav", t = 0.7 },
             { s = path .. "toz_boltout.wav", t = 0.96 },
             { s = randspin, t = 1.25 },
         }
     },
 
-    ["draw"] = { Source = "draw", EventTable = { { s = "eft_shared/weap_in.wav", t = 0 } } },
-    ["holster"] = { Source = "holster", EventTable = { { s = "eft_shared/weap_out.wav", t = 0 } } },
+    ["draw"] = { Source = "draw", EventTable = { { s = "arc9_eft_shared/weap_in.wav", t = 0 } } },
+    ["holster"] = { Source = "holster", EventTable = { { s = "arc9_eft_shared/weap_out.wav", t = 0 } } },
 
 
     ["fire"] = { Source = "fire" },
@@ -552,8 +553,8 @@ SWEP.Animations = {
         EventTable = rst_magcheck
     },
 
-    ["toggle"] = { Source = "mod_switch", EventTable = { { s = {"eft_shared/weapon_light_switcher1.wav", "eft_shared/weapon_light_switcher2.wav", "eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
-    ["switchsights"] = { Source = "mod_switch", EventTable = { { s = {"eft_shared/weapon_light_switcher1.wav", "eft_shared/weapon_light_switcher2.wav", "eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
+    ["toggle"] = { Source = "mod_switch", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
+    ["switchsights"] = { Source = "mod_switch", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
 
 
 
