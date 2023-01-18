@@ -5,7 +5,24 @@ ATT.Description = [[A "Poleva-6u" 20/70 FMJ slug shell for 20 gauge shotguns.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.DamageOverride = 135
+ATT.HasAmmoooooooo = true 
+
+ATT.EFTRoundName = "20/70 \"Poleva-6u\" slug"
+
+ATT.DamageMax = 135/2
+ATT.DamageMin = 89/2
+ATT.PhysBulletMuzzleVelocity = 445 /0.0254
+ATT.RangeMin = 10
+ATT.RangeMax = 1000 /0.0254
+
+ATT.Penetration =      17 *2.54/100/0.0254
+ATT.PenetrationDelta = 40/100
+ATT.ArmorPiercing =    40/100
+ATT.RicochetChance =   10/100
+
 ATT.Num = 1
+ATT.VisualRecoilMult = 0.9
+ATT.SpreadMult = 0.11
+
 
 ATT.Category = {"eft_ammo_20x70"}

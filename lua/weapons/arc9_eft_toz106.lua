@@ -99,8 +99,8 @@ SWEP.HeatDissipation = 6
 SWEP.HeatLockout = false
 
 SWEP.Malfunction = true 
-SWEP.MalfunctionCycle = true 
-SWEP.MalfunctionMeanShotsToFail = 9
+SWEP.MalfunctionCycle = true
+SWEP.MalfunctionMeanShotsToFail = 30
 
 --          Firemodes
 
@@ -260,7 +260,7 @@ SWEP.EjectDelay = 0.45
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
-    if !IsFirstTimePredicted() then return end
+    -- if !IsFirstTimePredicted() then return end
 
     local ending = ""
 
@@ -280,14 +280,25 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     -- 2 mag checking  (!nomag)
     
     if anim == "inspect" or anim == "inspect_empty" then
-        swep.EFTInspectnum = (swep.EFTInspectnum or 0) + 1
+        swep.EFTInspectnum = swep.EFTInspectnum or 0
+        if IsFirstTimePredicted() then
+            swep.EFTInspectnum = swep.EFTInspectnum + 1
+        end
         local rand = swep.EFTInspectnum
         if rand == 3 then swep.EFTInspectnum = 0 rand = 0 end
 
-        if rand == 1 and !nomag then -- mag
+        if rand == 2 and !nomag then -- mag
             ending = "_mag_" .. ending
+
+            if SERVER and ARC9EFTBASE then -- mag check
+                net.Start("arc9eftmagcheck")
+                net.WriteBool(false) -- accurate or not based on mag type
+                net.WriteUInt(math.min(swep:Clip1(), swep:GetMaxClip1()), 9)
+                net.WriteUInt(swep:GetMaxClip1(), 9)
+                net.Send(swep:GetOwner())
+            end
         else
-            -- if nomag then rand = math.min(rand, 1) end
+            if rand == 2 then swep.EFTInspectnum = 0 rand = 0 end
             ending = rand
         end
         
@@ -495,7 +506,7 @@ SWEP.Animations = {
 
 
 
-    ["inspect0"] = {
+    ["inspect1"] = {
         Source = "inspect0",
         MinProgress = 0.85,
         FireASAP = true,
@@ -513,7 +524,7 @@ SWEP.Animations = {
             { s = randspin, t = 73/26 },
         }
     },
-    ["inspect2"] = {
+    ["inspect0"] = {
         Source = "inspect2",
         MinProgress = 0.85,
         FireASAP = true,
