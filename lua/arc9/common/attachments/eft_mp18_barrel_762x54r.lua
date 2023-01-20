@@ -8,7 +8,17 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_mp18_barrel"}
 
+ATT.ClipSize = 1
+
 ATT.Attachments = {
+    {
+        PrintName = "Ammo type",
+        Category = "eft_ammo_762x54r",
+        Pos = Vector(0, -4, 2),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        Integral = "eft_ammo_762x54r_bt_gzh"
+    },
     {
         PrintName = "Handguard",
         Category = "eft_mp18_hg",

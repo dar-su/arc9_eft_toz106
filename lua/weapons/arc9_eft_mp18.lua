@@ -56,7 +56,7 @@ SWEP.PhysBulletMuzzleVelocity = 21000
 SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 1 -- Self-explanatory.
+SWEP.ClipSize = 0 -- Self-explanatory.
 SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 
@@ -275,6 +275,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         if IsFirstTimePredicted() then
             swep.EFTInspectnum = swep.EFTInspectnum + 1
         end
+        local rand = swep.EFTInspectnum
         if rand == 2 then swep.EFTInspectnum = 0 rand = 0 end
 
         return anim .. rand .. (empty and "_empty" or "")
@@ -321,11 +322,13 @@ SWEP.Animations = {
     ["toggle_empty"] = { Source = "mod_switch_empty", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
     ["switchsights_empty"] = { Source = "mod_switch_empty", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
 
-    ["inspect0"] = { Source = "inspect0", EventTable = inspectet },    
-    ["inspect0_empty"] = { Source = "inspect0_empty", EventTable = inspectet },    
+    ["inspect"] = { Source = "idle" },    -- shutup arc9
 
-    ["inspect1"] = { Source = "inspect1", EventTable = chamberet },    
-    ["inspect1_empty"] = { Source = "inspect1_empty", EventTable = chamberet },    
+    ["inspect1"] = { Source = "inspect0", EventTable = inspectet },    
+    ["inspect1_empty"] = { Source = "inspect0_empty", EventTable = inspectet },    
+
+    ["inspect0"] = { Source = "inspect1", EventTable = chamberet },    
+    ["inspect0_empty"] = { Source = "inspect1_empty", EventTable = chamberet },    
 }
 
 -------------------------- ATTACHMENTS
@@ -337,6 +340,7 @@ SWEP.AttachmentElements = {
     ["eft_mp18_stock_wood"]    = { Bodygroups = { {3, 1} } },
     ["eft_mp18_stock_poly"]    = { Bodygroups = { {3, 2} } },
     ["eft_mp18_mount_std"]    = { Bodygroups = { {4, 1} } },
+    ["76254r"]    = { Bodygroups = { {5, 1} } },
 }
 
 SWEP.Attachments = {
@@ -348,6 +352,9 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Installed = "eft_mp18_barrel_762x54r",
         SubAttachments = {
+            {
+                Installed = "eft_ammo_762x54r_bt_gzh",
+            },
             {
                 Installed = "eft_mp18_hg_wood",
             }
