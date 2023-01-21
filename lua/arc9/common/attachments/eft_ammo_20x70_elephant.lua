@@ -25,5 +25,7 @@ ATT.Num = 1
 ATT.VisualRecoilMult = 1.3
 ATT.SpreadMult = 1.05
 
+ATT.ActivateElements = {"eft_ammo_20x70_devastator"}
+
 
 ATT.Category = {"eft_ammo_20x70"}

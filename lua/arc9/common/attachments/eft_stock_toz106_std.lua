@@ -15,6 +15,12 @@ ATT.Attachments = {
         Pos = Vector(1.5, -1.5, 0),
         Ang = Angle(0, -90, 0),
     },
+    {
+        PrintName = "Cheek rest",
+        Category = "eft_toz106_gpcp",
+        Pos = Vector(0, -12, 0),
+        Ang = Angle(0, -90, 0),
+    },
 }
 ATT.ToggleStats = {
     {

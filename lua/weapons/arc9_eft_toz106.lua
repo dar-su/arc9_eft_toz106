@@ -48,14 +48,14 @@ SWEP.SpreadAddRecoil = 0.005
 
 --          Recoil
 
-SWEP.Recoil = 0.7
+SWEP.Recoil = 4
 
 SWEP.RecoilMultHipFire = 1.1
 SWEP.RecoilMultCrouch = 0.75
 SWEP.RecoilAutoControlMultHipFire = 0.5
 
 SWEP.RecoilUp = 2
-SWEP.RecoilSide = 0.7
+SWEP.RecoilSide = 4
 SWEP.RecoilRandomUp = 0.9
 SWEP.RecoilRandomSide = 1
 
@@ -65,26 +65,27 @@ SWEP.ViewRecoilUpMultMultHipFire = 2
 SWEP.ViewRecoilSideMult = -4
 SWEP.ViewRecoilSideMultMultHipFire = -2
 
-SWEP.RecoilDissipationRate = 11
-SWEP.RecoilAutoControl = 3.6
+SWEP.RecoilDissipationRate = 8
+SWEP.RecoilAutoControl = 5
 SWEP.RecoilResetTime = 0.05
 
 SWEP.UseVisualRecoil = true 
 SWEP.VisualRecoil = 2
-SWEP.VisualRecoilMultHipFire = 4
-SWEP.VisualRecoilMultSights = 2
+SWEP.VisualRecoilCrouchMult = 0.5
 
 SWEP.VisualRecoilCenter = Vector(2, 4, 2)
-SWEP.VisualRecoilUp = 1.1 -- Vertical tilt
-SWEP.VisualRecoilSide = 0.01 -- Horizontal tilt
-SWEP.VisualRecoilRoll = 2 -- Roll tilt
+SWEP.VisualRecoilUp = 4 -- Vertical tilt
+SWEP.VisualRecoilSide = 0.02 -- Horizontal tilt
+SWEP.VisualRecoilRoll = 1 -- Roll tilt
 
-SWEP.VisualRecoilPunch = 2 -- How far back visual recoil moves the gun
+SWEP.VisualRecoilPunch = 1
 SWEP.VisualRecoilPunchMultSights = 1
-SWEP.VisualRecoilPositionBump = 3
+SWEP.VisualRecoilPositionBump = 6
 
-SWEP.VisualRecoilDampingConst = 11
-SWEP.VisualRecoilSpringMagnitude = .2
+SWEP.VisualRecoilSpringPunchDamping = 11
+SWEP.VisualRecoilDampingConst = 200
+SWEP.VisualRecoilSpringMagnitude = 1
+SWEP.VisualRecoilPositionBumpUp = 0.00001
 
 SWEP.RecoilKick = 0.05
 SWEP.RecoilKickDamping = 10
@@ -144,6 +145,10 @@ SWEP.ReloadInSights = true
 SWEP.DropMagazineSounds = { "weapons/arc9_ud/common/rifle_magdrop_1.ogg", "weapons/arc9_ud/common/rifle_magdrop_2.ogg", "weapons/arc9_ud/common/rifle_magdrop_3.ogg", "weapons/arc9_ud/common/rifle_magdrop_4.ogg" }
 SWEP.DropMagazineAmount = 1
 SWEP.DropMagazineTime = 1.6
+SWEP.DropMagazineQCA = 4
+SWEP.DropMagazinePos = Vector(0, 0, 0)
+SWEP.DropMagazineAng = Angle(90, 180, 90)
+SWEP.DropMagazineVelocity = Vector(0, 0, 0)
 SWEP.Bash = false
 SWEP.PrimaryBash = false
 SWEP.TracerNum = 1
@@ -391,7 +396,10 @@ local rst_empty = {
     { s = path .. "sv98_mag_in.wav", t = 2.75 },
     { s = randspin, t = 3.9 },
     { s = path .. "toz_boltin.wav", t = 4.22 },
-    { s = randspin, t = 4.58 },
+    { s = randspin, t = 4.58 },    
+    {hide = 0, t = 0},
+    {hide = 1, t = 1.6},
+    {hide = 0, t = 2.4}
 }
 
 local rst_magcheck = {
@@ -400,6 +408,13 @@ local rst_magcheck = {
     { s = randspin, t = 1.59 },
     { s = path .. "sv98_mag_in.wav", t = 1.8 },
     { s = randspin, t = 2.72 },
+}
+
+SWEP.ReloadHideBoneTables = {
+    [1] = {
+        "mod_magazine",
+        "patron_001",
+    },
 }
 
 
@@ -760,6 +775,19 @@ SWEP.AttachmentElements = {
     ["eft_ammo_20x70_poleva6u"] = { Bodygroups = { {7, 3} } },
     ["eft_ammo_20x70_star"] = { Bodygroups = { {7, 4} } },
 }
+
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local eles = data.elements
+    local mdl = data.model
+    
+    if eles["eft_stock_toz106_gpcp"] then
+        if eles["unfolded"] then
+            mdl:SetBodygroup(8, 1)
+        else
+            mdl:SetBodygroup(8, 2)
+        end
+    end
+end
 
 SWEP.Attachments = {
     {

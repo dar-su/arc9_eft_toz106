@@ -9,8 +9,10 @@ ATT.HasAmmoooooooo = true
 
 ATT.EFTRoundName = "20/70 \"explosive\" slug"
 
-ATT.DamageMax = 51/2
-ATT.DamageMin = 20/2
+-- ATT.DamageMax = 51/2
+-- ATT.DamageMin = 20/2
+ATT.DamageMax = 55*5
+ATT.DamageMin = 55*5
 ATT.PhysBulletMuzzleVelocity = 251 /0.0254
 ATT.RangeMin = 10
 ATT.RangeMax = 1000 /0.0254
@@ -27,11 +29,14 @@ ATT.SpreadMult = 1.07
 ATT.MalfunctionMeanShotsToFailMult = 0.075
 
 
-ATT.ExplosionEffect = "csgo_muzzle_he"
+ATT.ExplosionDamage = 55*5
+ATT.ExplosionRadius = 5
+ATT.ExplosionEffect = "eft_explosion_round"
 ATT.ImpactDecal = "FadingScorch"
 
 ATT.Override_DamageType = DMG_BLAST + DMG_AIRBOAT
 ATT.DamageType = DMG_BLAST + DMG_AIRBOAT
 
 
+ATT.ActivateElements = {"eft_ammo_20x70_poleva6u"}
 ATT.Category = {"eft_ammo_20x70"}
