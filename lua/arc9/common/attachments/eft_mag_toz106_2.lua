@@ -6,6 +6,10 @@ ATT.Description = [[A 2-shot 20 gauge magazine for MTs 20-01 and TOZ-106 hunting
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
+
+ATT.EFTErgoAdd = 2
+ATT.CustomPros = { Ergonomics = "+2" }
+
 ATT.ChamberSize = 1
 ATT.ClipSize = 2
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_toz106_2.mdl"

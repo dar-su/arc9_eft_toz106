@@ -77,51 +77,45 @@ SWEP.Firemodes = { { Mode = 1 } }
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 3.5
+SWEP.Recoil = 3 * 1.08  * 1.31
+
+-- SWEP.RecoilMultHipFire = 1.1
+SWEP.RecoilMultCrouch = 0.75
+-- SWEP.RecoilAutoControlMultHipFire = 0.5
+
+SWEP.RecoilUp = 2
+SWEP.RecoilSide = 5
+SWEP.RecoilRandomUp = 0.9
+SWEP.RecoilRandomSide = 1
+
 SWEP.ViewRecoil = true
-SWEP.ViewRecoilUpMult = 100
-SWEP.ViewRecoilSideMult = 300
--- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 0.2 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 0.015 -- Multiplier for vertical recoil
+SWEP.ViewRecoilUpMult = 11
+-- SWEP.ViewRecoilUpMultMultHipFire = 2
+SWEP.ViewRecoilSideMult = -4
+-- SWEP.ViewRecoilSideMultMultHipFire = -2
 
--- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
--- This type of recoil CANNOT be predicted.
-SWEP.RecoilRandomUp = 0.06
-SWEP.RecoilRandomSide = 0.05
-
-SWEP.RecoilDissipationRate = 15 -- How much recoil dissipates per second.
-SWEP.RecoilResetTime = 0.05 -- How long the gun must go before the recoil pattern starts to reset.
-
-SWEP.RecoilAutoControl = 5 -- Multiplier for automatic recoil control.
-
-SWEP.RecoilKick = 0.4
-SWEP.FirstShootRecoilUp = 2
-
-
-
+SWEP.RecoilDissipationRate = 8
+SWEP.RecoilAutoControl = 5
+SWEP.RecoilResetTime = 0.05
 
 SWEP.UseVisualRecoil = true 
+SWEP.VisualRecoil = 2 * 1.08  * 1.31
+SWEP.VisualRecoilMultHipFire = 0.3
+SWEP.VisualRecoilMultCrouch = 0.5
 
-SWEP.VisualRecoil = 1
-SWEP.VisualRecoilMultSights = 0.9
+SWEP.VisualRecoilCenter = Vector(2, 4, 2)
+SWEP.VisualRecoilUp = 40 -- Vertical tilt
+SWEP.VisualRecoilSide = 0.2 -- Horizontal tilt
+SWEP.VisualRecoilRoll = 1 -- Roll tilt
 
-SWEP.VisualRecoilUp = 3 -- Vertical tilt for visual recoil.
-SWEP.VisualRecoilSide = 0.03 -- Horizontal tilt for visual recoil.
-SWEP.VisualRecoilRoll = 1 -- Roll tilt for visual recoil.
-
-SWEP.VisualRecoilCenter = Vector(2, 16, 2) -- The "axis" of visual recoil. Where your hand is.
-
-SWEP.VisualRecoilPunch = 5 -- How far back visual recoil moves the gun.
+SWEP.VisualRecoilPunch = 2
 SWEP.VisualRecoilPunchMultSights = 0.5
+SWEP.VisualRecoilPositionBump = 15
 
-
-SWEP.VisualRecoilHipFire = 1
-
-SWEP.RecoilKick = 0.05 -- Camera recoil
-SWEP.RecoilKickDamping = 10 -- Camera recoil damping
-SWEP.VisualRecoilDampingConst = 70 -- How spring will be visual recoil, 120 is default
-SWEP.VisualRecoilSpringMagnitude = 0.6
+SWEP.VisualRecoilSpringPunchDamping = 20
+SWEP.VisualRecoilDampingConst = 222
+SWEP.VisualRecoilSpringMagnitude = 1
+SWEP.VisualRecoilPositionBumpUp = 0.001
 
 
 
@@ -169,6 +163,7 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 SWEP.IronSights = {
     Pos = Vector(-4.425, -8, 0.9),
     Ang = Angle(0, 0, 0),
+    ViewModelFOV = 60,
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(-1, 0, 8),
         Ang = Angle(0, 0, -145),
@@ -223,7 +218,7 @@ SWEP.AnimDraw = false
 
 SWEP.MuzzleParticle = "muzzleflash_ak47" -- Used for some muzzle effects.
 
-SWEP.ShellModel = "models/shells/shell_762nato.mdl"
+SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/762x54r.mdl"
 SWEP.ShellCorrectAng = Angle(0, 180, 0)
 SWEP.ShellScale = 1
 SWEP.CaseEffectQCA = 2
@@ -282,9 +277,17 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     end
 end
 
+SWEP.ReloadHideBoneTables = {
+    [1] = {
+        "shellport",
+        "patron_in_weapon_000",
+    },
+}
+
 local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.wav","arc9_eft_shared/weapon_generic_rifle_spin2.wav","arc9_eft_shared/weapon_generic_rifle_spin3.wav","arc9_eft_shared/weapon_generic_rifle_spin4.wav","arc9_eft_shared/weapon_generic_rifle_spin5.wav","arc9_eft_shared/weapon_generic_rifle_spin6.wav","arc9_eft_shared/weapon_generic_rifle_spin7.wav","arc9_eft_shared/weapon_generic_rifle_spin8.wav","arc9_eft_shared/weapon_generic_rifle_spin9.wav","arc9_eft_shared/weapon_generic_rifle_spin10.wav"}
 local inspectet = { { s = randspin, t = 6/24 }, { s = randspin, t = 23/24 }, { s = randspin, t = 40/24 } }
 local chamberet = { { s = randspin, t = 0.11 }, { s = path .. "mr18_barrel_lock.wav", t = 0.93 }, { s = path .. "mr18_barrel_open.wav", t = 1 }, { s = randspin, t = 1.5 }, { s = path .. "mr18_barrel_close.wav", t = 2.25 }, { s = randspin, t = 2.73 } }
+local pouchout = {"arc9_eft_shared/generic_mag_pouch_out1.wav","arc9_eft_shared/generic_mag_pouch_out2.wav","arc9_eft_shared/generic_mag_pouch_out3.wav","arc9_eft_shared/generic_mag_pouch_out4.wav","arc9_eft_shared/generic_mag_pouch_out5.wav","arc9_eft_shared/generic_mag_pouch_out6.wav","arc9_eft_shared/generic_mag_pouch_out7.wav"}
 
 SWEP.Animations = {
 
@@ -296,11 +299,12 @@ SWEP.Animations = {
     ["ready_empty"] = { Source = "draw_empty", EventTable = { { s = "arc9_eft_shared/weap_in.wav", t = 0 }, } },
     ["holster_empty"] = { Source = "holster_empty", EventTable = { { s = "arc9_eft_shared/weap_out.wav", t = 0 }, } },
 
-    ["fire"] = { Source = "fire", EventTable = { { s = path .. "p90_trigger_hammer.wav", t = 0 }, } },
+    ["fire"] = { Source = "fire", EventTable = { { s = "arc9_eft_shared/weap_trigger_hammer.wav", t = 0 }, } },
 
     ["reload"] = {
         Source = "reload", 
         MinProgress = 0.85,
+        Mult = 0.875,
         FireASAP = true,
         EjectAt = 2.43,
         MagSwapTime = 2.5,
@@ -310,10 +314,14 @@ SWEP.Animations = {
             { s = path .. "mr18_barrel_open.wav", t = 0.97 },
             { s = randspin, t = 1.22 },
             { s = path .. "mr18_round_out1.wav", t = 1.92 },
+            { s = pouchout, t = 2.7 },
             { s = path .. "mr18_round_in1.wav", t = 3.41 },
             { s = randspin, t = 4.11 },
-            { s = path .. "mr18_barrel_close.wav", t = 4.44 },
-            { s = randspin, t = 4.87 }, 
+            { s = path .. "mr18_barrel_close.wav", t = 4.35 },
+            { s = randspin, t = 4.87 },     
+            {hide = 0, t = 0},
+            {hide = 1, t = 2.43},
+            {hide = 0, t = 3}
         }
     },
 
@@ -343,6 +351,23 @@ SWEP.AttachmentElements = {
     ["76254r"]    = { Bodygroups = { {5, 1} } },
 }
 
+SWEP.missingpartsnotifsent = 0
+
+function SWEP:HookP_BlockFire()
+    if  !self:GetValue("HasStock") or 
+        !self:GetValue("HasBarrel") or
+        !self:GetValue("HasHandguard") or
+        !self:GetValue("HasAmmoooooooo") then
+            
+            if self.missingpartsnotifsent < CurTime() then
+                self.missingpartsnotifsent = CurTime() + 3
+                net.Start("arc9eftmissingparts")
+                net.Send(self:GetOwner())
+            end
+            return true 
+    end
+end
+
 SWEP.Attachments = {
     {
         PrintName = "Barrel",
@@ -369,3 +394,10 @@ SWEP.Attachments = {
         Installed = "eft_mp18_stock_wood"
     },
 }
+
+SWEP.EFTErgo = 44
+if ARC9EFTBASE then
+    SWEP.AimDownSightsTimeHook = ARC9EFT.ErgoHook
+else
+    print("Dum! install arc9 eft shared!!!!!!!!!!!!!!")
+end

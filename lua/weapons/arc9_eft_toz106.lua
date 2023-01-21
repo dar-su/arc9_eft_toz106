@@ -48,11 +48,11 @@ SWEP.SpreadAddRecoil = 0.005
 
 --          Recoil
 
-SWEP.Recoil = 4
+SWEP.Recoil = 4 * 1.34
 
-SWEP.RecoilMultHipFire = 1.1
+-- SWEP.RecoilMultHipFire = 1.1
 SWEP.RecoilMultCrouch = 0.75
-SWEP.RecoilAutoControlMultHipFire = 0.5
+-- SWEP.RecoilAutoControlMultHipFire = 0.5
 
 SWEP.RecoilUp = 2
 SWEP.RecoilSide = 4
@@ -61,16 +61,16 @@ SWEP.RecoilRandomSide = 1
 
 SWEP.ViewRecoil = true
 SWEP.ViewRecoilUpMult = 11
-SWEP.ViewRecoilUpMultMultHipFire = 2
+-- SWEP.ViewRecoilUpMultMultHipFire = 2
 SWEP.ViewRecoilSideMult = -4
-SWEP.ViewRecoilSideMultMultHipFire = -2
+-- SWEP.ViewRecoilSideMultMultHipFire = -2
 
 SWEP.RecoilDissipationRate = 8
 SWEP.RecoilAutoControl = 5
 SWEP.RecoilResetTime = 0.05
 
 SWEP.UseVisualRecoil = true 
-SWEP.VisualRecoil = 2
+SWEP.VisualRecoil = 2 * 1.34
 SWEP.VisualRecoilCrouchMult = 0.5
 
 SWEP.VisualRecoilCenter = Vector(2, 4, 2)
@@ -161,8 +161,9 @@ SWEP.TracerColor = Color(255, 225, 200)
 --          Positions and offsets
 
 SWEP.IronSights = {
-    Pos = Vector(-4.28, -8, 0.92),
+    Pos = Vector(-4.28, -6.5, 0.92),
     Ang = Angle(0, 0, 0),
+    ViewModelFOV = 60,
     Midpoint = { Pos = Vector(-1, 0, 8), Ang = Angle(0, 0, -145) },
     Magnification = 1.1,
 }
@@ -206,13 +207,13 @@ SWEP.AnimDraw = false
 
 SWEP.CamQCA = 3
 SWEP.CamOffsetAng = Angle(0, 0, 90)
-SWEP.CamQCA_Mult = 0.3
-SWEP.CamQCA_Mult_ADS = 0.05
+SWEP.CamQCA_Mult = 0.5
+SWEP.CamQCA_Mult_ADS = 1
 
 SWEP.MuzzleParticle = "muzzleflash_shotgun"
 
 SWEP.CaseEffectQCA = 2
-SWEP.ShellModel = "models/weapons/arccw/eft_shells/patron_12x70_shell.mdl"
+SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/20x70.mdl"
 SWEP.ShellScale = 1.5
 SWEP.ShellCorrectAng = Angle(0, 180, 0)
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
@@ -363,6 +364,7 @@ local rik_magcheck = {
 }
 
 local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.wav","arc9_eft_shared/weapon_generic_rifle_spin2.wav","arc9_eft_shared/weapon_generic_rifle_spin3.wav","arc9_eft_shared/weapon_generic_rifle_spin4.wav","arc9_eft_shared/weapon_generic_rifle_spin5.wav","arc9_eft_shared/weapon_generic_rifle_spin6.wav","arc9_eft_shared/weapon_generic_rifle_spin7.wav","arc9_eft_shared/weapon_generic_rifle_spin8.wav","arc9_eft_shared/weapon_generic_rifle_spin9.wav","arc9_eft_shared/weapon_generic_rifle_spin10.wav"}
+local pouchin = {"arc9_eft_shared/generic_mag_pouch_in1.wav","arc9_eft_shared/generic_mag_pouch_in2.wav","arc9_eft_shared/generic_mag_pouch_in3.wav","arc9_eft_shared/generic_mag_pouch_in4.wav","arc9_eft_shared/generic_mag_pouch_in5.wav","arc9_eft_shared/generic_mag_pouch_in6.wav","arc9_eft_shared/generic_mag_pouch_in7.wav"}
 
 local rst_single = {
     { s = randspin, t = 0.18 },
@@ -377,8 +379,8 @@ local rst_single = {
 local rst_def = {
     { s = randspin, t = 0.25 },
     { s = path .. "sv98_mag_out.wav", t = 0.77 },
+    { s = pouchin, t = 1.2 },
     { s = randspin, t = 1.42 },
-    { s = "arc9_eft_shared/weap_magin_sbrosnik.wav", t = 1.62 },
     { s = "arc9_eft_shared/weap_mag_pullout.wav", t = 1.92 },
     { s = randspin, t = 2.02 },
     { s = path .. "sv98_mag_in.wav", t = 2.38 },
@@ -431,19 +433,19 @@ SWEP.Animations = {
             { t = 1, lhik = 1, rhik = 1 },
         },
         EventTable = { 
-            { s = "arc9_eft_shared/weap_in.wav", t = 0 },
+            { s = path .. "mr133_draw.wav", t = 0 },
             { s = path .. "toz_boltin.wav", t = 0.7 },
             { s = path .. "toz_boltout.wav", t = 0.96 },
             { s = randspin, t = 1.25 },
         }
     },
 
-    ["draw"] = { Source = "draw", EventTable = { { s = "arc9_eft_shared/weap_in.wav", t = 0 } } },
-    ["holster"] = { Source = "holster", EventTable = { { s = "arc9_eft_shared/weap_out.wav", t = 0 } } },
+    ["draw"] = { Source = "draw", EventTable = { { s = path .. "mr133_draw.wav", t = 0 } } },
+    ["holster"] = { Source = "holster", EventTable = { { s = path .. "mr133_holster.wav", t = 0 } } },
 
 
-    ["fire"] = { Source = "fire" },
-    ["fire_dry"] = { Source = "fire_dry" },
+    ["fire"] = { Source = "fire", EventTable = { { s = "arc9_eft_shared/weap_trigger_hammer.wav", t = 0 }, } },
+    ["dryfire"] = { Source = "fire_dry", EventTable = { { s = "arc9_eft_shared/weap_trigger_hammer.wav", t = 0 }, } },
 
     ["reload"] = {
         Source = "reload_single",
@@ -749,6 +751,21 @@ SWEP.Animations = {
 
 ------------------------- [[[           Attachments            ]]] -------------------------
 
+SWEP.missingpartsnotifsent = 0
+
+function SWEP:HookP_BlockFire()
+    if  !self:GetValue("HasStock") or 
+        !self:GetValue("HasAmmoooooooo") then
+            
+            if self.missingpartsnotifsent < CurTime() then
+                self.missingpartsnotifsent = CurTime() + 3
+                net.Start("arc9eftmissingparts")
+                net.Send(self:GetOwner())
+            end
+            return true 
+    end
+end
+
 SWEP.AttachmentElements = {
     ["eft_mag_toz106_2"]    = { Bodygroups = { {1, 1} } },
     ["eft_mag_toz106_4"]    = { Bodygroups = { {1, 2} } },
@@ -832,3 +849,10 @@ SWEP.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
     },
 }
+
+SWEP.EFTErgo = 60
+if ARC9EFTBASE then
+    SWEP.AimDownSightsTimeHook = ARC9EFT.ErgoHook
+else
+    print("Dum! install arc9 eft shared!!!!!!!!!!!!!!")
+end

@@ -8,6 +8,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.HasAmmoooooooo = true 
 
 ATT.EFTRoundName = "20/70 Devastator slug"
+ATT.ShellModel = "models/weapons/arc9/darsu_eft/shells/20x70bh.mdl"
 
 ATT.DamageMax = 198/2
 ATT.DamageMin = 110/2

@@ -3,6 +3,14 @@ ATT.CompactName = "MP18 600mm"
 ATT.Icon = Material("entities/eft_mp18_attachments/barrel.png", "mips smooth")
 ATT.Description = [[A standard factory-produced 600mm barrel with a front sight for MP-18 7.62x54R hunting rifles.]]
 
+ATT.HasBarrel = true 
+
+ATT.EFTErgoAdd = -13
+ATT.CustomCons = { Ergonomics = "-13" }
+
+ATT.RecoilMult = 0.92
+ATT.VisualRecoilMult = 0.92
+
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 

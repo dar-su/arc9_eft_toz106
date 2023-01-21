@@ -8,6 +8,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.HasAmmoooooooo = true 
 
 ATT.EFTRoundName = "20/70 Elephant killer slug"
+ATT.ShellModel = "models/weapons/arc9/darsu_eft/shells/20x70bh.mdl"
 
 ATT.DamageMax = 108/2
 ATT.DamageMin = 60/2

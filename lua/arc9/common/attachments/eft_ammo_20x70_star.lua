@@ -8,6 +8,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.HasAmmoooooooo = true 
 
 ATT.EFTRoundName = "20/70 Star slug"
+ATT.ShellModel = "models/weapons/arc9/darsu_eft/shells/20x70star.mdl"
 
 ATT.DamageMax = 154/2
 ATT.DamageMin = 97/2

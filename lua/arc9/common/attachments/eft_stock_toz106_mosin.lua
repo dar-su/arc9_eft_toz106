@@ -3,6 +3,14 @@ ATT.CompactName = "TOZ106 Mosin"
 ATT.Icon = Material("entities/eft_toz106_attachments/mosin.png", "mips smooth")
 ATT.Description = [[A custom-made stock for the TOZ-106 hunting shotgun, made from the Mosin rifle stock base. It was made by ancient Russian dark magic called "Napiling".]]
 
+ATT.HasStock = true
+
+ATT.EFTErgoAdd = 9
+ATT.CustomPros = { Ergonomics = "+9" }
+
+ATT.RecoilMult = 0.58
+ATT.VisualRecoilMult = 0.58
+
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.Model = "models/weapons/arc9/darsu_eft/mods/toz106_mosin_rhik.mdl"

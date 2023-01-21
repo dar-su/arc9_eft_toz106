@@ -6,6 +6,12 @@ ATT.Description = [[A standard-issue stock with a folding shoulder piece for the
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
+ATT.EFTErgoAdd = 7
+ATT.CustomPros = { Ergonomics = "+7" }
+
+ATT.RecoilMult = 0.62
+ATT.VisualRecoilMult = 0.62
+
 ATT.Category = {"eft_toz106_stock"}
 ATT.ActivateElements = {"unfolded"}
 ATT.Attachments = {
