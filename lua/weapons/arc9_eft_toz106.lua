@@ -70,7 +70,7 @@ SWEP.RecoilAutoControl = 5
 SWEP.RecoilResetTime = 0.05
 
 SWEP.UseVisualRecoil = true 
-SWEP.VisualRecoil = 2 * 1.34
+SWEP.VisualRecoil = 6 * 1.34
 SWEP.VisualRecoilCrouchMult = 0.5
 
 SWEP.VisualRecoilCenter = Vector(2, 4, 2)
@@ -142,7 +142,7 @@ SWEP.ClipSize = 1 -- actual chamber (no mag)
 SWEP.SupplyLimit = 4
 SWEP.SecondarySupplyLimit = 4
 SWEP.ReloadInSights = true
-SWEP.DropMagazineSounds = { "weapons/arc9_ud/common/rifle_magdrop_1.ogg", "weapons/arc9_ud/common/rifle_magdrop_2.ogg", "weapons/arc9_ud/common/rifle_magdrop_3.ogg", "weapons/arc9_ud/common/rifle_magdrop_4.ogg" }
+SWEP.DropMagazineSounds = nil
 SWEP.DropMagazineAmount = 1
 SWEP.DropMagazineTime = 1.6
 SWEP.DropMagazineQCA = 4
