@@ -7,10 +7,10 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = 7
-ATT.CustomPros = { Ergonomics = "+7" }
+ATT.CustomPros = { Ergonomics = "+7", ["Recoil while unfolded"] = "-38%" }
 
-ATT.RecoilMult = 0.62
-ATT.VisualRecoilMult = 0.62
+-- ATT.RecoilMult = 0.62
+-- ATT.VisualRecoilMult = 0.62
 
 ATT.Category = {"eft_toz106_stock"}
 ATT.ActivateElements = {"unfolded"}
@@ -31,6 +31,8 @@ ATT.Attachments = {
 ATT.ToggleStats = {
     {
         PrintName = "Unfolded",
+        RecoilMult = 0.62,
+        VisualRecoilMult = 0.62
     },
     {
         PrintName = "Folded",

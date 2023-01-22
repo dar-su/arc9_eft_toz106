@@ -1,7 +1,9 @@
 ATT.PrintName = "20/70 \"explosive\" slug"
 ATT.CompactName = "Explosive"
 ATT.Icon = Material("entities/eft_toz106_attachments/20ga_p_event.png", "mips smooth")
-ATT.Description = [[Homemade 20/70 round for 20 gauge shotguns with an exlosive charge. The recipe was printed in a rare issue of the magazine "Homemade reloads", which was never published. Uses a cartridge case from a 20/70 "Poleva-6u" round.]]
+ATT.Description = [[Homemade 20/70 round for 20 gauge shotguns with an exlosive charge. The recipe was printed in a rare issue of the magazine "Homemade reloads", which was never published. Uses a cartridge case from a 20/70 "Poleva-6u" round.
+
+Event item - removed from game.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 

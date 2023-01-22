@@ -1,7 +1,9 @@
 ATT.PrintName = "20/70 Elephant killer slug"
 ATT.CompactName = "Elephant k"
 ATT.Icon = Material("entities/eft_toz106_attachments/20ga_d_event.png", "mips smooth")
-ATT.Description = [[Homemade 20/70 cartridge for 20 gauge shotguns with a specially sharpened projectile and a huge amount of gunpowder. The recipe is in the top 10 according to "Homemade Reloads" magazine. Uses a casing from a 20/70 "Devastator" round.]]
+ATT.Description = [[Homemade 20/70 cartridge for 20 gauge shotguns with a specially sharpened projectile and a huge amount of gunpowder. The recipe is in the top 10 according to "Homemade Reloads" magazine. Uses a casing from a 20/70 "Devastator" round.
+
+Event item - removed from game.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 

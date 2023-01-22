@@ -1,7 +1,9 @@
 ATT.PrintName = "20/70 \"Flechetta Plus\""
 ATT.CompactName = "Flechetta"
 ATT.Icon = Material("entities/eft_toz106_attachments/20ga_event.png", "mips smooth")
-ATT.Description = [[Homemade 20/70 cartridge for 20-gauge shotguns, loaded with sharpened flechettes and a huge amount of gunpowder. Uses a cartridge case from a 20/70 7.5mm buckshot casing.]]
+ATT.Description = [[Homemade 20/70 cartridge for 20-gauge shotguns, loaded with sharpened flechettes and a huge amount of gunpowder. Uses a cartridge case from a 20/70 7.5mm buckshot casing.
+
+Event item - removed from game.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
