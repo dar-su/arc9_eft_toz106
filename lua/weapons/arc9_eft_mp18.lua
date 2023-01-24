@@ -36,21 +36,52 @@ SWEP.RecoilMultHipFire = 1.1
 SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
+-- default bt gzh
+SWEP.DamageMax = 78/1.5
+SWEP.DamageMin = 51.5/1.5
+SWEP.PhysBulletMuzzleVelocity = 875 /0.0254
+SWEP.RangeMin = 10
+SWEP.RangeMax = 1000 /0.0254
 
-SWEP.DamageMax = 33 -- Damage done at point blank range
-SWEP.DamageMin = 24 -- Damage done at maximum range
+SWEP.Penetration =      55 *2.54/100/0.0254
+SWEP.PenetrationDelta = 87/100
+SWEP.ArmorPiercing =    87/100
+SWEP.RicochetChance =   26/100
 
-SWEP.DamageRand = 0.05 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
+SWEP.DamageLookupTable = {
+    {   10/0.0254, 
+    78/1.5     },
 
-SWEP.RangeMin = 600 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 11000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
+    {   100 /0.0254, 
+    73.67/1.5     },
 
-SWEP.Penetration = 5 -- Units of wood that can be penetrated by this gun.
+    {   200 /0.0254, 
+    70/1.5     },
 
--------------------------- PHYS BULLET BALLISTICS
+    {   300 /0.0254, 
+    66.3/1.5     },
 
-SWEP.PhysBulletMuzzleVelocity = 21000
+    {   400 /0.0254, 
+    62.22/1.5     },
 
+    {   500 /0.0254, 
+    58.3/1.5     },
+
+    {   600 /0.0254, 
+    55.7/1.5     },
+
+    {   700 /0.0254, 
+    54.16/1.5     },
+
+    {   800 /0.0254, 
+    53.1/1.5     },
+
+    {   900 /0.0254, 
+    52.24/1.5     },
+
+    {   1000 /0.0254, 
+    51.5/1.5     },
+}
 -------------------------- MAGAZINE
 
 SWEP.Ammo = "ar2" -- What ammo type this gun uses.
@@ -392,6 +423,11 @@ SWEP.Attachments = {
         Pos = Vector(0, 11, 0),
         Ang = Angle(0, 0, 0),
         Installed = "eft_mp18_stock_wood"
+    },
+    {
+        PrintName = "Custom slot",
+        Category = {"eft_custom_slot", "eft_custom_mp18"},
+        -- CosmeticOnly = true,
     },
 }
 

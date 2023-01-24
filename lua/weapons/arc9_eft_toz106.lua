@@ -29,15 +29,20 @@ SWEP.DefaultBodygroups = "000000010"
 
 ------------------------- [[[           STATS            ]]] -------------------------
 
---          Damage
+--          default 75
 
-SWEP.Damage = 25
+SWEP.DamageMax = 25/2
+SWEP.DamageMin = 14/2
+SWEP.PhysBulletMuzzleVelocity = 430 /0.0254
+SWEP.RangeMin = 10
+SWEP.RangeMax = 1000 /0.0254
+
+SWEP.Penetration =      3 *2.54/100/0.0254
+SWEP.PenetrationDelta = 14/100
+SWEP.ArmorPiercing =    14/100
+SWEP.RicochetChance =   0/100
+
 SWEP.Num = 8
-SWEP.DamageRand = 0.01
-SWEP.RangeMin = 600
-SWEP.RangeMax = 11000
-SWEP.Penetration = 5
-SWEP.PhysBulletMuzzleVelocity = 21000
 
 
 --          Spread
@@ -848,6 +853,11 @@ SWEP.Attachments = {
         Pos = Vector(0, 18, 2),
         Ang = Angle(90, -90, 90),
         Icon_Offset = Vector(0, 0, 0),
+    },
+    {
+        PrintName = "Custom slot",
+        Category = {"eft_custom_slot", "eft_custom_toz106"},
+        -- CosmeticOnly = true,
     },
 }
 
