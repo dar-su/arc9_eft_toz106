@@ -27,6 +27,7 @@ SWEP.MirrorVMWM = true
 SWEP.DefaultBodygroups = "000000010"
 
 
+SWEP.BarrelLength = 32
 ------------------------- [[[           STATS            ]]] -------------------------
 
 --          default 75
@@ -182,6 +183,8 @@ SWEP.SprintPos = Vector(4, -5, 0)
 SWEP.CrouchPos = Vector(-0.7, -3.8, .35)
 SWEP.CrouchAng = Angle(0, 0, -1)
 
+SWEP.NearWallAng = Angle(0, 55, 0)
+SWEP.NearWallPos = Vector(0, 0, -15)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizePos = Vector(19, 30, 4)
 SWEP.CustomizeSnapshotFOV = 95

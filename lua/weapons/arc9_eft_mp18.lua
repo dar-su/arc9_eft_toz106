@@ -34,6 +34,7 @@ SWEP.DefaultBodygroups = "00000000000000"
 SWEP.SpreadMultHipFire = 5
 SWEP.RecoilMultHipFire = 1.1
 SWEP.RecoilAutoControlMultHipFire = 0.5
+SWEP.BarrelLength = 42
 
 -------------------------- DAMAGE PROFILE
 -- default bt gzh
@@ -210,6 +211,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintAng = Angle(50, 10, -45)
 SWEP.SprintPos = Vector(4, -5, 0)
 
+SWEP.NearWallAng = Angle(0, 55, 0)
+SWEP.NearWallPos = Vector(0, 0, -15)
 SWEP.CrouchPos = Vector(-0.5, -2.0, -.45)
 SWEP.CrouchAng = Angle(0, 0, -1)
 
