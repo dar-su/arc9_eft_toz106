@@ -157,7 +157,7 @@ SWEP.DropMagazineAng = Angle(90, 180, 90)
 SWEP.DropMagazineVelocity = Vector(0, 0, 0)
 SWEP.Bash = false
 SWEP.PrimaryBash = false
-SWEP.TracerNum = 1
+SWEP.TracerNum = 0
 SWEP.TracerColor = Color(255, 225, 200)
 
 
