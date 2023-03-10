@@ -54,47 +54,40 @@ SWEP.SpreadAddRecoil = 0.005
 
 --          Recoil
 
-SWEP.Recoil = 4 * 1.34
+SWEP.Recoil = 9 * 1.34
 
--- SWEP.RecoilMultHipFire = 1.1
 SWEP.RecoilMultCrouch = 0.75
--- SWEP.RecoilAutoControlMultHipFire = 0.5
 
 SWEP.RecoilUp = 2
-SWEP.RecoilSide = 4
-SWEP.RecoilRandomUp = 0.9
+SWEP.RecoilSide = 1
+SWEP.RecoilRandomUp = 0.3
 SWEP.RecoilRandomSide = 1
 
-SWEP.ViewRecoil = true
-SWEP.ViewRecoilUpMult = 11
--- SWEP.ViewRecoilUpMultMultHipFire = 2
-SWEP.ViewRecoilSideMult = -4
--- SWEP.ViewRecoilSideMultMultHipFire = -2
-
 SWEP.RecoilDissipationRate = 8
-SWEP.RecoilAutoControl = 5
+SWEP.RecoilAutoControl = 3
 SWEP.RecoilResetTime = 0.05
 
+SWEP.VisualRecoil = 0.8 * 1.34 -- default atts
 SWEP.UseVisualRecoil = true 
-SWEP.VisualRecoil = 6 * 1.34
-SWEP.VisualRecoilCrouchMult = 0.5
+SWEP.VisualRecoilMultSights = 1
+SWEP.VisualRecoilMultHipFire = 1
+SWEP.VisualRecoilMultCrouch = 0.5
 
-SWEP.VisualRecoilCenter = Vector(2, 4, 2)
-SWEP.VisualRecoilUp = 4 -- Vertical tilt
-SWEP.VisualRecoilSide = 0.02 -- Horizontal tilt
-SWEP.VisualRecoilRoll = 1 -- Roll tilt
+SWEP.VisualRecoilCenter = Vector(2, 18, 2)
+SWEP.VisualRecoilUp = 60 -- Vertical tilt
+SWEP.VisualRecoilSide = 0.2 -- Horizontal tilt
+SWEP.VisualRecoilRoll = 51 -- Roll tilt
 
-SWEP.VisualRecoilPunch = 1
-SWEP.VisualRecoilPunchMultSights = 1
-SWEP.VisualRecoilPositionBump = 6
+SWEP.VisualRecoilPunch = -1 -- How far back visual recoil moves the gun
+SWEP.VisualRecoilPunchMultSights = 0.5 -- How far back visual recoil moves the gun
 
-SWEP.VisualRecoilSpringPunchDamping = 11
-SWEP.VisualRecoilDampingConst = 200
-SWEP.VisualRecoilSpringMagnitude = 1
-SWEP.VisualRecoilPositionBumpUp = 0.00001
 
-SWEP.RecoilKick = 0.05
-SWEP.RecoilKickDamping = 10
+SWEP.VisualRecoilSpringPunchDamping = 20 / 2.67
+SWEP.VisualRecoilDampingConst = 200 
+SWEP.VisualRecoilSpringMagnitude = 1 / 1.67
+
+SWEP.VisualRecoilPositionBumpUp = 0
+SWEP.VisualRecoilPositionBumpUpHipFire = 0
 
 
 --          Heating
