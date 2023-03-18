@@ -218,7 +218,7 @@ SWEP.CaseEffectQCA = 2
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/20x70.mdl"
 SWEP.ShellSounds = ARC9.ShotgunShellSoundsTable
 SWEP.ShellScale = 1.5
-SWEP.ShellCorrectAng = Angle(0, 180, 0)
+SWEP.ShellCorrectAng = Angle(0, 180, 180)
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
