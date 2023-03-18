@@ -47,9 +47,11 @@ SWEP.Num = 8
 
 
 --          Spread
-SWEP.SpreadMultHipFire = 1
 SWEP.Spread = 0.01113
-SWEP.SpreadAddRecoil = 0.005
+SWEP.UseDispersion = true
+SWEP.DispersionSpread = 0.005
+SWEP.DispersionSpreadMultMove = 3
+SWEP.DispersionSpreadAddHipFire = 0.02
 
 
 --          Recoil
@@ -202,7 +204,7 @@ SWEP.WorldModelOffset = {
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC
-SWEP.AnimDraw = false
+SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 
 
 --          Effects
