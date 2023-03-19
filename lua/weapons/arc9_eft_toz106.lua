@@ -50,8 +50,9 @@ SWEP.Num = 8
 SWEP.Spread = 0.01113
 SWEP.UseDispersion = true
 SWEP.DispersionSpread = 0.005
-SWEP.DispersionSpreadMultMove = 3
 SWEP.DispersionSpreadAddHipFire = 0.02
+SWEP.DispersionSpreadMultMove = 1.5
+SWEP.DispersionSpreadAddMove = 0.015
 
 
 --          Recoil

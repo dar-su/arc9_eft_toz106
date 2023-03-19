@@ -31,7 +31,6 @@ SWEP.Slot = 2
 SWEP.MirrorVMWM = true
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.SpreadMultHipFire = 5
 SWEP.RecoilMultHipFire = 1.1
 SWEP.RecoilAutoControlMultHipFire = 0.5
 SWEP.BarrelLength = 42
@@ -146,9 +145,10 @@ SWEP.VisualRecoilPositionBumpUpHipFire = 0.001
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.004
-
-SWEP.SpreadAddRecoil = 0.005 -- Applied per unit of recoil.
+SWEP.Spread = 0.344 * ARC9.MOAToAcc
+SWEP.SpreadAddHipFire = 0.02
+SWEP.SpreadMultMove = 1.5
+SWEP.SpreadAddMove = 0.015
 
 -------------------------- HANDLING
 
