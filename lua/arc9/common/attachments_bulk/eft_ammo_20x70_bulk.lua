@@ -1,5 +1,9 @@
 local ATT = {}
 
+local dmgrange = (GetConVar("arc9_eft_mindmgrange"):GetInt() or 1000)/1000
+local dmgrange_sg = (GetConVar("arc9_eft_mindmgrange_sg"):GetInt() or 100)/100
+local mult2070 = GetConVar("arc9_eft_mult_shotgun"):GetFloat() or 0.5
+
 
 ///////////////////////////////////////      eft_ammo_20x70_56
 
@@ -17,11 +21,11 @@ ATT.HasAmmoooooooo = true
 
 ATT.EFTRoundName = "20/70 5.6mm buckshot"
 
-ATT.DamageMax = 26/2
-ATT.DamageMin = 14/2
+ATT.DamageMax = 26 * mult2070
+ATT.DamageMin = 14 * mult2070
 ATT.PhysBulletMuzzleVelocity = 340 /0.0254
 ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254
+ATT.RangeMax = 100 /0.0254 * dmgrange_sg
 
 ATT.Penetration =      1 *2.54/100/0.0254
 ATT.PenetrationDelta = 12/100
@@ -55,11 +59,11 @@ ATT.HasAmmoooooooo = true
 
 ATT.EFTRoundName = "20/70 6.2mm buckshot"
 
-ATT.DamageMax = 22/2
-ATT.DamageMin = 12/2
+ATT.DamageMax = 22 * mult2070
+ATT.DamageMin = 12 * mult2070
 ATT.PhysBulletMuzzleVelocity = 410 /0.0254
 ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254
+ATT.RangeMax = 100 /0.0254 * dmgrange_sg
 
 ATT.Penetration =      2 *2.54/100/0.0254
 ATT.PenetrationDelta = 13/100
@@ -93,11 +97,11 @@ ATT.HasAmmoooooooo = true
 
 ATT.EFTRoundName = "20/70 7.3mm buckshot"
 
-ATT.DamageMax = 23/2
-ATT.DamageMin = 12.5/2
+ATT.DamageMax = 23 * mult2070
+ATT.DamageMin = 12.5 * mult2070
 ATT.PhysBulletMuzzleVelocity = 475 /0.0254
 ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254
+ATT.RangeMax = 100 /0.0254 * dmgrange_sg
 
 ATT.Penetration =      3 *2.54/100/0.0254
 ATT.PenetrationDelta = 13/100
@@ -131,11 +135,11 @@ ATT.HasAmmoooooooo = true
 
 ATT.EFTRoundName = "20/70 7.5mm buckshot"
 
-ATT.DamageMax = 25/2
-ATT.DamageMin = 14/2
+ATT.DamageMax = 25 * mult2070
+ATT.DamageMin = 14 * mult2070
 ATT.PhysBulletMuzzleVelocity = 430 /0.0254
 ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254
+ATT.RangeMax = 100 /0.0254 * dmgrange_sg
 
 ATT.Penetration =      3 *2.54/100/0.0254
 ATT.PenetrationDelta = 14/100
@@ -170,11 +174,11 @@ ATT.HasAmmoooooooo = true
 ATT.EFTRoundName = "20/70 Devastator slug"
 ATT.ShellModel = "models/weapons/arc9/darsu_eft/shells/20x70bh.mdl"
 
-ATT.DamageMax = 198/2
-ATT.DamageMin = 110/2
+ATT.DamageMax = 198 * mult2070
+ATT.DamageMin = 110 * mult2070
 ATT.PhysBulletMuzzleVelocity = 415 /0.0254
 ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254
+ATT.RangeMax = 1000 /0.0254 * dmgrange
 
 ATT.Penetration =      5 *2.54/100/0.0254
 ATT.PenetrationDelta = 13/100
@@ -211,11 +215,11 @@ ATT.HasAmmoooooooo = true
 ATT.EFTRoundName = "20/70 Elephant killer slug"
 ATT.ShellModel = "models/weapons/arc9/darsu_eft/shells/20x70bh.mdl"
 
-ATT.DamageMax = 108/2
-ATT.DamageMin = 60/2
+ATT.DamageMax = 108 * mult2070
+ATT.DamageMin = 60 * mult2070
 ATT.PhysBulletMuzzleVelocity = 620 /0.0254
 ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254
+ATT.RangeMax = 1000 /0.0254 * dmgrange
 
 ATT.Penetration =      47 *2.54/100/0.0254
 ATT.PenetrationDelta = 70/100
@@ -255,13 +259,13 @@ ATT.HasAmmoooooooo = true
 ATT.EFTRoundName = "20/70 \"explosive\" slug"
 ATT.ShellModel = "models/weapons/arc9/darsu_eft/shells/20x70p6u.mdl"
 
--- ATT.DamageMax = 51/2
--- ATT.DamageMin = 20/2
+-- ATT.DamageMax = 51 * mult2070
+-- ATT.DamageMin = 20 * mult2070
 ATT.DamageMax = 55*5
 ATT.DamageMin = 55*5
 ATT.PhysBulletMuzzleVelocity = 251 /0.0254
 ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254
+ATT.RangeMax = 1000 /0.0254 * dmgrange
 
 ATT.Penetration =      16 *2.54/100/0.0254
 ATT.PenetrationDelta = 72/100
@@ -309,11 +313,11 @@ ATT.HasAmmoooooooo = true
 
 ATT.EFTRoundName = "20/70 \"Flechetta Plus\""
 
-ATT.DamageMax = 71/2
-ATT.DamageMin = 35/2
+ATT.DamageMax = 71 * mult2070
+ATT.DamageMin = 35 * mult2070
 ATT.PhysBulletMuzzleVelocity = 415 /0.0254
 ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254
+ATT.RangeMax = 100 /0.0254 * dmgrange_sg
 
 ATT.Penetration =      45 *2.54/100/0.0254
 ATT.PenetrationDelta = 47/100
@@ -349,11 +353,11 @@ ATT.HasAmmoooooooo = true
 ATT.EFTRoundName = "20/70 \"Poleva-3\" slug"
 ATT.ShellModel = "models/weapons/arc9/darsu_eft/shells/20x70p3.mdl"
 
-ATT.DamageMax = 120/2
-ATT.DamageMin = 80/2
+ATT.DamageMax = 120 * mult2070
+ATT.DamageMin = 80 * mult2070
 ATT.PhysBulletMuzzleVelocity = 425 /0.0254
 ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254
+ATT.RangeMax = 1000 /0.0254 * dmgrange
 
 ATT.Penetration =      14 *2.54/100/0.0254
 ATT.PenetrationDelta = 35/100
@@ -388,11 +392,11 @@ ATT.HasAmmoooooooo = true
 ATT.EFTRoundName = "20/70 \"Poleva-6u\" slug"
 ATT.ShellModel = "models/weapons/arc9/darsu_eft/shells/20x70p6u.mdl"
 
-ATT.DamageMax = 135/2
-ATT.DamageMin = 89/2
+ATT.DamageMax = 135 * mult2070
+ATT.DamageMin = 89 * mult2070
 ATT.PhysBulletMuzzleVelocity = 445 /0.0254
 ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254
+ATT.RangeMax = 1000 /0.0254 * dmgrange
 
 ATT.Penetration =      17 *2.54/100/0.0254
 ATT.PenetrationDelta = 40/100
@@ -427,11 +431,11 @@ ATT.HasAmmoooooooo = true
 ATT.EFTRoundName = "20/70 Star slug"
 ATT.ShellModel = "models/weapons/arc9/darsu_eft/shells/20x70star.mdl"
 
-ATT.DamageMax = 154/2
-ATT.DamageMin = 97/2
+ATT.DamageMax = 154 * mult2070
+ATT.DamageMin = 97 * mult2070
 ATT.PhysBulletMuzzleVelocity = 415 /0.0254
 ATT.RangeMin = 10
-ATT.RangeMax = 1000 /0.0254
+ATT.RangeMax = 1000 /0.0254 * dmgrange
 
 ATT.Penetration =      16 *2.54/100/0.0254
 ATT.PenetrationDelta = 72/100
