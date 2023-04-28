@@ -3,18 +3,23 @@ AddCSLuaFile()
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Escape From Tarkov"
-SWEP.SubCategory = "Shotguns"
-SWEP.Credits = { Author1 = "Darsu", Assets2 = "Battlestate Games LTD", General_help3 = "Mal0", ARC9_Base4 = "Arctic" }
+SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_sg")
+SWEP.Credits = { 
+    [ARC9:GetPhrase("eft_trivia_author") .. "1"] = "Darsu", 
+    [ARC9:GetPhrase("eft_trivia_assets") .. "2"] = "Battlestate Games LTD", 
+    [ARC9:GetPhrase("eft_trivia_help") .. "3"] = "Mal0", 
+    [ARC9:GetPhrase("eft_trivia_arc9") .. "4"] = "Arctic",
+}
 
-SWEP.PrintName = "TOZ-106"
-SWEP.Class = "Bolt-action Shotgun"
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_toz106")
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_boltsg")
 
 SWEP.Trivia = {
-    Manufacturer1 = "Tula Arms Plant",
-    Calibre2 = "20/70 gauge",
-    Action3 = "Bolt",
-    Country4 = "Russia",
-    Year5 = "1993"
+    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = ARC9:GetPhrase("eft_trivia_manuf_tula"),
+    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "20/70 gauge",
+    [ARC9:GetPhrase("eft_trivia_act") .. "3"] = ARC9:GetPhrase("eft_trivia_act_bolt"),
+    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_rus"),
+    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "1993"
 }
 
 SWEP.Description = [[A single-barreled 20 gauge hunting shotgun with a sliding breech bolt. Widely known by it vernacular name, the Death of the Chairman, for its compact size.]]

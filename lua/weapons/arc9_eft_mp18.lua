@@ -4,20 +4,25 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Escape From Tarkov"
-SWEP.SubCategory = "Shotguns"
+SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_sg")
 
 SWEP.PrintName = "MP-18"
 
-SWEP.Class = "Single-shot rifle"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_singleshot")
 SWEP.Trivia = {
-    Manufacturer1 = "Bergmann",
-    Calibre2 = "7.62x54R",
-    Action3 = "Blow",
-    Country4 = "USSR",
-    Year5 = "1983"
+    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = "Bergmann",
+    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "7.62x54R",
+    [ARC9:GetPhrase("eft_trivia_act") .. "3"]= ARC9:GetPhrase("eft_trivia_act_blow"),
+    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_ussr"),
+    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "1983"
 }
 
-SWEP.Credits = { Author1 = "Darsu", Assets2 = "Battlestate Games LTD", General_help3 = "Mal0", ARC9_Base4 = "Arctic" }
+SWEP.Credits = { 
+    [ARC9:GetPhrase("eft_trivia_author") .. "1"] = "Darsu", 
+    [ARC9:GetPhrase("eft_trivia_assets") .. "2"] = "Battlestate Games LTD", 
+    [ARC9:GetPhrase("eft_trivia_help") .. "3"] = "Mal0", 
+    [ARC9:GetPhrase("eft_trivia_arc9") .. "4"] = "Arctic",
+}
 
 
 SWEP.Description = [[MP-18 is the legendary Soviet single-barreled rifle. This gun behaves perfectly in all weather conditions, no breakdowns or failures have ever been identified.]]
