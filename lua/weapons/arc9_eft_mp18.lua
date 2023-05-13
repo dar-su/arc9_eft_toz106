@@ -406,6 +406,15 @@ function SWEP:HookP_BlockFire()
     end
 end
 
+function SWEP:Hook_RedPrintName()
+    if  !self:GetValue("HasStock") or 
+        !self:GetValue("HasBarrel") or
+        !self:GetValue("HasHandguard") or
+        !self:GetValue("HasAmmoooooooo") then
+            return true 
+    end
+end
+
 SWEP.Attachments = {
     {
         PrintName = "Barrel",
