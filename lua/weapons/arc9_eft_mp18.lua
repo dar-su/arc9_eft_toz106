@@ -170,7 +170,7 @@ SWEP.HoldBreathTime = 40
 SWEP.RestoreBreathTime = 30
 SWEP.BreathInSound = false 
 SWEP.BreathOutSound = false
-SWEP.BreathRunOutSound = "arc9_eft_shared/bear3_breath_sprint.wav"
+SWEP.BreathRunOutSound = "arc9_eft_shared/bear3_breath_sprint.ogg"
 
 SWEP.AimDownSightsTime = 0.33 -- How long it takes to go from hip fire to aiming down sights.
 SWEP.SprintToFireTime = 0.35 -- How long it takes to go from sprinting to being able to fire.
@@ -277,18 +277,18 @@ SWEP.BulletBones  = { -- the bone that represents bullets in gun/mag
 
 local path = "weapons/darsu_eft/mp18/"
 
-SWEP.ShootSound = path .. "mr18_fire_close.wav"
-SWEP.ShootSoundIndoor = path .. "mr18_fire_indoor_close.wav"
-SWEP.DistantShootSound = path .. "mr18_fire_distant.wav"
-SWEP.DistantShootSoundIndoor = path .. "mr18_fire_indoor_distant.wav"
+SWEP.ShootSound = path .. "mr18_fire_close.ogg"
+SWEP.ShootSoundIndoor = path .. "mr18_fire_indoor_close.ogg"
+SWEP.DistantShootSound = path .. "mr18_fire_distant.ogg"
+SWEP.DistantShootSoundIndoor = path .. "mr18_fire_indoor_distant.ogg"
 
 SWEP.FiremodeSound = "" -- we will have own in sound tables
 SWEP.ToggleAttSound = "" -- we will have own in sound tables
 
-SWEP.DryFireSound = path .. "mr43_hammer_release.wav"
+SWEP.DryFireSound = path .. "mr43_hammer_release.ogg"
 
-SWEP.EnterSightsSound = "arc9_eft_shared/weap_in.wav"
-SWEP.ExitSightsSound = "arc9_eft_shared/weap_handoff.wav"
+SWEP.EnterSightsSound = "arc9_eft_shared/weap_in.ogg"
+SWEP.ExitSightsSound = "arc9_eft_shared/weap_handoff.ogg"
 
 -- SWEP.SuppressEmptySuffix = true 
 
@@ -322,22 +322,22 @@ SWEP.ReloadHideBoneTables = {
     },
 }
 
-local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.wav","arc9_eft_shared/weapon_generic_rifle_spin2.wav","arc9_eft_shared/weapon_generic_rifle_spin3.wav","arc9_eft_shared/weapon_generic_rifle_spin4.wav","arc9_eft_shared/weapon_generic_rifle_spin5.wav","arc9_eft_shared/weapon_generic_rifle_spin6.wav","arc9_eft_shared/weapon_generic_rifle_spin7.wav","arc9_eft_shared/weapon_generic_rifle_spin8.wav","arc9_eft_shared/weapon_generic_rifle_spin9.wav","arc9_eft_shared/weapon_generic_rifle_spin10.wav"}
+local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.ogg","arc9_eft_shared/weapon_generic_rifle_spin2.ogg","arc9_eft_shared/weapon_generic_rifle_spin3.ogg","arc9_eft_shared/weapon_generic_rifle_spin4.ogg","arc9_eft_shared/weapon_generic_rifle_spin5.ogg","arc9_eft_shared/weapon_generic_rifle_spin6.ogg","arc9_eft_shared/weapon_generic_rifle_spin7.ogg","arc9_eft_shared/weapon_generic_rifle_spin8.ogg","arc9_eft_shared/weapon_generic_rifle_spin9.ogg","arc9_eft_shared/weapon_generic_rifle_spin10.ogg"}
 local inspectet = { { s = randspin, t = 6/24 }, { s = randspin, t = 23/24 }, { s = randspin, t = 40/24 } }
-local chamberet = { { s = randspin, t = 0.11 }, { s = path .. "mr18_barrel_lock.wav", t = 0.93 }, { s = path .. "mr18_barrel_open.wav", t = 1 }, { s = randspin, t = 1.5 }, { s = path .. "mr18_barrel_close.wav", t = 2.25 }, { s = randspin, t = 2.73 } }
-local pouchout = {"arc9_eft_shared/generic_mag_pouch_out1.wav","arc9_eft_shared/generic_mag_pouch_out2.wav","arc9_eft_shared/generic_mag_pouch_out3.wav","arc9_eft_shared/generic_mag_pouch_out4.wav","arc9_eft_shared/generic_mag_pouch_out5.wav","arc9_eft_shared/generic_mag_pouch_out6.wav","arc9_eft_shared/generic_mag_pouch_out7.wav"}
+local chamberet = { { s = randspin, t = 0.11 }, { s = path .. "mr18_barrel_lock.ogg", t = 0.93 }, { s = path .. "mr18_barrel_open.ogg", t = 1 }, { s = randspin, t = 1.5 }, { s = path .. "mr18_barrel_close.ogg", t = 2.25 }, { s = randspin, t = 2.73 } }
+local pouchout = {"arc9_eft_shared/generic_mag_pouch_out1.ogg","arc9_eft_shared/generic_mag_pouch_out2.ogg","arc9_eft_shared/generic_mag_pouch_out3.ogg","arc9_eft_shared/generic_mag_pouch_out4.ogg","arc9_eft_shared/generic_mag_pouch_out5.ogg","arc9_eft_shared/generic_mag_pouch_out6.ogg","arc9_eft_shared/generic_mag_pouch_out7.ogg"}
 
 SWEP.Animations = {
 
-    ["draw"] = { Source = "draw", EventTable = { { s = "arc9_eft_shared/weap_in.wav", t = 0 }, } },
-    ["ready"] = { Source = "draw", EventTable = { { s = "arc9_eft_shared/weap_in.wav", t = 0 }, } },
-    ["holster"] = { Source = "holster", EventTable = { { s = "arc9_eft_shared/weap_out.wav", t = 0 }, } },
+    ["draw"] = { Source = "draw", EventTable = { { s = "arc9_eft_shared/weap_in.ogg", t = 0 }, } },
+    ["ready"] = { Source = "draw", EventTable = { { s = "arc9_eft_shared/weap_in.ogg", t = 0 }, } },
+    ["holster"] = { Source = "holster", EventTable = { { s = "arc9_eft_shared/weap_out.ogg", t = 0 }, } },
 
-    ["draw_empty"] = { Source = "draw_empty", EventTable = { { s = "arc9_eft_shared/weap_in.wav", t = 0 }, } },
-    ["ready_empty"] = { Source = "draw_empty", EventTable = { { s = "arc9_eft_shared/weap_in.wav", t = 0 }, } },
-    ["holster_empty"] = { Source = "holster_empty", EventTable = { { s = "arc9_eft_shared/weap_out.wav", t = 0 }, } },
+    ["draw_empty"] = { Source = "draw_empty", EventTable = { { s = "arc9_eft_shared/weap_in.ogg", t = 0 }, } },
+    ["ready_empty"] = { Source = "draw_empty", EventTable = { { s = "arc9_eft_shared/weap_in.ogg", t = 0 }, } },
+    ["holster_empty"] = { Source = "holster_empty", EventTable = { { s = "arc9_eft_shared/weap_out.ogg", t = 0 }, } },
 
-    ["fire"] = { Source = "fire", EventTable = { { s = "arc9_eft_shared/weap_trigger_hammer.wav", t = 0 }, } },
+    ["fire"] = { Source = "fire", EventTable = { { s = "arc9_eft_shared/weap_trigger_hammer.ogg", t = 0 }, } },
 
     ["reload"] = {
         Source = "reload", 
@@ -348,14 +348,14 @@ SWEP.Animations = {
         MagSwapTime = 2.5,
         EventTable = {
             { s = randspin, t = 0.11 },
-            { s = path .. "mr18_barrel_lock.wav", t = 0.89 },
-            { s = path .. "mr18_barrel_open.wav", t = 0.97 },
+            { s = path .. "mr18_barrel_lock.ogg", t = 0.89 },
+            { s = path .. "mr18_barrel_open.ogg", t = 0.97 },
             { s = randspin, t = 1.22 },
-            { s = path .. "mr18_round_out1.wav", t = 1.92 },
+            { s = path .. "mr18_round_out1.ogg", t = 1.92 },
             { s = pouchout, t = 2.7 },
-            { s = path .. "mr18_round_in1.wav", t = 3.41 },
+            { s = path .. "mr18_round_in1.ogg", t = 3.41 },
             { s = randspin, t = 4.11 },
-            { s = path .. "mr18_barrel_close.wav", t = 4.35 },
+            { s = path .. "mr18_barrel_close.ogg", t = 4.35 },
             { s = randspin, t = 4.87 },     
             {hide = 0, t = 0},
             {hide = 1, t = 2.43},
@@ -363,10 +363,10 @@ SWEP.Animations = {
         }
     },
 
-    ["toggle"] = { Source = "mod_switch", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
-    ["switchsights"] = { Source = "mod_switch", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
-    ["toggle_empty"] = { Source = "mod_switch_empty", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
-    ["switchsights_empty"] = { Source = "mod_switch_empty", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
+    ["toggle"] = { Source = "mod_switch", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.ogg", "arc9_eft_shared/weapon_light_switcher2.ogg", "arc9_eft_shared/weapon_light_switcher3.ogg"}, t = 0 } } },
+    ["switchsights"] = { Source = "mod_switch", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.ogg", "arc9_eft_shared/weapon_light_switcher2.ogg", "arc9_eft_shared/weapon_light_switcher3.ogg"}, t = 0 } } },
+    ["toggle_empty"] = { Source = "mod_switch_empty", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.ogg", "arc9_eft_shared/weapon_light_switcher2.ogg", "arc9_eft_shared/weapon_light_switcher3.ogg"}, t = 0 } } },
+    ["switchsights_empty"] = { Source = "mod_switch_empty", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.ogg", "arc9_eft_shared/weapon_light_switcher2.ogg", "arc9_eft_shared/weapon_light_switcher3.ogg"}, t = 0 } } },
 
     ["inspect"] = { Source = "idle" },    -- shutup arc9
 

@@ -144,7 +144,7 @@ SWEP.HoldBreathTime = 40
 SWEP.RestoreBreathTime = 30
 SWEP.BreathInSound = false 
 SWEP.BreathOutSound = false
-SWEP.BreathRunOutSound = "arc9_eft_shared/bear3_breath_sprint.wav"
+SWEP.BreathRunOutSound = "arc9_eft_shared/bear3_breath_sprint.ogg"
 
 
 --          Generic stats
@@ -260,18 +260,18 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 
 local path = "weapons/darsu_eft/toz106/"
 
-SWEP.ShootSound = { path .. "toz_fire_close1.wav", path .. "toz_fire_close2.wav" }
-SWEP.ShootSoundIndoor = path .. "toz_fire_indoor_close.wav"
-SWEP.DistantShootSound = { path .. "toz_fire_distant1.wav", path .. "toz_fire_distant2.wav" }
-SWEP.DistantShootSoundIndoor = path .. "toz_fire_indoor_distant.wav"
+SWEP.ShootSound = { path .. "toz_fire_close1.ogg", path .. "toz_fire_close2.ogg" }
+SWEP.ShootSoundIndoor = path .. "toz_fire_indoor_close.ogg"
+SWEP.DistantShootSound = { path .. "toz_fire_distant1.ogg", path .. "toz_fire_distant2.ogg" }
+SWEP.DistantShootSoundIndoor = path .. "toz_fire_indoor_distant.ogg"
 
 SWEP.FiremodeSound = "" -- we will have own in sound tables
 SWEP.ToggleAttSound = "" -- we will have own in sound tables
 SWEP.DryFireSound = "" -- we will have own in sound tables
 
 
-SWEP.EnterSightsSound = "arc9_eft_shared/weap_in.wav"
-SWEP.ExitSightsSound = "arc9_eft_shared/weap_handoff.wav"
+SWEP.EnterSightsSound = "arc9_eft_shared/weap_in.ogg"
+SWEP.ExitSightsSound = "arc9_eft_shared/weap_handoff.ogg"
 
 ------------------------- [[[           Hooks & functions            ]]] -------------------------
 
@@ -382,41 +382,41 @@ local rik_magcheck = {
     { t = 1, lhik = 1, rhik = 1 },
 }
 
-local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.wav","arc9_eft_shared/weapon_generic_rifle_spin2.wav","arc9_eft_shared/weapon_generic_rifle_spin3.wav","arc9_eft_shared/weapon_generic_rifle_spin4.wav","arc9_eft_shared/weapon_generic_rifle_spin5.wav","arc9_eft_shared/weapon_generic_rifle_spin6.wav","arc9_eft_shared/weapon_generic_rifle_spin7.wav","arc9_eft_shared/weapon_generic_rifle_spin8.wav","arc9_eft_shared/weapon_generic_rifle_spin9.wav","arc9_eft_shared/weapon_generic_rifle_spin10.wav"}
-local pouchin = {"arc9_eft_shared/generic_mag_pouch_in1.wav","arc9_eft_shared/generic_mag_pouch_in2.wav","arc9_eft_shared/generic_mag_pouch_in3.wav","arc9_eft_shared/generic_mag_pouch_in4.wav","arc9_eft_shared/generic_mag_pouch_in5.wav","arc9_eft_shared/generic_mag_pouch_in6.wav","arc9_eft_shared/generic_mag_pouch_in7.wav"}
+local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.ogg","arc9_eft_shared/weapon_generic_rifle_spin2.ogg","arc9_eft_shared/weapon_generic_rifle_spin3.ogg","arc9_eft_shared/weapon_generic_rifle_spin4.ogg","arc9_eft_shared/weapon_generic_rifle_spin5.ogg","arc9_eft_shared/weapon_generic_rifle_spin6.ogg","arc9_eft_shared/weapon_generic_rifle_spin7.ogg","arc9_eft_shared/weapon_generic_rifle_spin8.ogg","arc9_eft_shared/weapon_generic_rifle_spin9.ogg","arc9_eft_shared/weapon_generic_rifle_spin10.ogg"}
+local pouchin = {"arc9_eft_shared/generic_mag_pouch_in1.ogg","arc9_eft_shared/generic_mag_pouch_in2.ogg","arc9_eft_shared/generic_mag_pouch_in3.ogg","arc9_eft_shared/generic_mag_pouch_in4.ogg","arc9_eft_shared/generic_mag_pouch_in5.ogg","arc9_eft_shared/generic_mag_pouch_in6.ogg","arc9_eft_shared/generic_mag_pouch_in7.ogg"}
 
 local rst_single = {
     { s = randspin, t = 0.18 },
-    { s = path .. "toz_boltin.wav", t = 0.68 },
-    { s = "arc9_eft_shared/weap_handoff.wav", t = 0.8 },
+    { s = path .. "toz_boltin.ogg", t = 0.68 },
+    { s = "arc9_eft_shared/weap_handoff.ogg", t = 0.8 },
     { s = randspin, t = 1.43 },
-    { s = path .. "saiga_round_in_chamber.wav", t = 1.64 },
-    { s = path .. "toz_boltin.wav", t = 2.24 },
+    { s = path .. "saiga_round_in_chamber.ogg", t = 1.64 },
+    { s = path .. "toz_boltin.ogg", t = 2.24 },
     { s = randspin, t = 2.64 },
 }
 
 local rst_def = {
     { s = randspin, t = 0.25 },
-    { s = path .. "sv98_mag_out.wav", t = 0.77 },
+    { s = path .. "sv98_mag_out.ogg", t = 0.77 },
     { s = pouchin, t = 1.2 },
     { s = randspin, t = 1.42 },
-    { s = "arc9_eft_shared/weap_mag_pullout.wav", t = 1.92 },
+    { s = "arc9_eft_shared/weap_mag_pullout.ogg", t = 1.92 },
     { s = randspin, t = 2.02 },
-    { s = path .. "sv98_mag_in.wav", t = 2.38 },
+    { s = path .. "sv98_mag_in.ogg", t = 2.38 },
     { s = randspin, t = 3.19 },
 }
 
 local rst_empty = {
     { s = randspin, t = 0.08 },
-    { s = path .. "toz_boltin.wav", t = 0.34 },
+    { s = path .. "toz_boltin.ogg", t = 0.34 },
     { s = randspin, t = 0.64 },
-    { s = path .. "sv98_mag_out.wav", t = 1.26 },
+    { s = path .. "sv98_mag_out.ogg", t = 1.26 },
     { s = randspin, t = 1.82 },
-    { s = "arc9_eft_shared/weap_mag_pullout.wav", t = 2.35 },
+    { s = "arc9_eft_shared/weap_mag_pullout.ogg", t = 2.35 },
     { s = randspin, t = 2.35 },
-    { s = path .. "sv98_mag_in.wav", t = 2.75 },
+    { s = path .. "sv98_mag_in.ogg", t = 2.75 },
     { s = randspin, t = 3.9 },
-    { s = path .. "toz_boltin.wav", t = 4.22 },
+    { s = path .. "toz_boltin.ogg", t = 4.22 },
     { s = randspin, t = 4.58 },    
     {hide = 0, t = 0},
     {hide = 1, t = 1.6},
@@ -425,9 +425,9 @@ local rst_empty = {
 
 local rst_magcheck = {
     { s = randspin, t = 0.15 },
-    { s = path .. "sv98_mag_out.wav", t = 0.33 },
+    { s = path .. "sv98_mag_out.ogg", t = 0.33 },
     { s = randspin, t = 1.59 },
-    { s = path .. "sv98_mag_in.wav", t = 1.8 },
+    { s = path .. "sv98_mag_in.ogg", t = 1.8 },
     { s = randspin, t = 2.72 },
 }
 
@@ -452,19 +452,19 @@ SWEP.Animations = {
             { t = 1, lhik = 1, rhik = 1 },
         },
         EventTable = { 
-            { s = path .. "mr133_draw.wav", t = 0 },
-            { s = path .. "toz_boltin.wav", t = 0.7 },
-            { s = path .. "toz_boltout.wav", t = 0.96 },
+            { s = path .. "mr133_draw.ogg", t = 0 },
+            { s = path .. "toz_boltin.ogg", t = 0.7 },
+            { s = path .. "toz_boltout.ogg", t = 0.96 },
             { s = randspin, t = 1.25 },
         }
     },
 
-    ["draw"] = { Source = "draw", EventTable = { { s = path .. "mr133_draw.wav", t = 0 } } },
-    ["holster"] = { Source = "holster", EventTable = { { s = path .. "mr133_holster.wav", t = 0 } } },
+    ["draw"] = { Source = "draw", EventTable = { { s = path .. "mr133_draw.ogg", t = 0 } } },
+    ["holster"] = { Source = "holster", EventTable = { { s = path .. "mr133_holster.ogg", t = 0 } } },
 
 
-    ["fire"] = { Source = "fire", EventTable = { { s = "arc9_eft_shared/weap_trigger_hammer.wav", t = 0 }, } },
-    ["dryfire"] = { Source = "fire_dry", EventTable = { { s = "arc9_eft_shared/weap_trigger_hammer.wav", t = 0 }, } },
+    ["fire"] = { Source = "fire", EventTable = { { s = "arc9_eft_shared/weap_trigger_hammer.ogg", t = 0 }, } },
+    ["dryfire"] = { Source = "fire_dry", EventTable = { { s = "arc9_eft_shared/weap_trigger_hammer.ogg", t = 0 }, } },
 
     ["reload"] = {
         Source = "reload_single",
@@ -572,8 +572,8 @@ SWEP.Animations = {
         },
         EventTable = {
             { s = randspin, t = 0.23},
-            { s = path.."toz_boltout.wav", t = 0.45},
-            { s = path.."toz_boltin.wav", t = 1},
+            { s = path.."toz_boltout.ogg", t = 0.45},
+            { s = path.."toz_boltin.ogg", t = 1},
             { s = randspin, t = 1.44 },
         },
     },
@@ -600,8 +600,8 @@ SWEP.Animations = {
         EventTable = rst_magcheck
     },
 
-    ["toggle"] = { Source = "mod_switch", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
-    ["switchsights"] = { Source = "mod_switch", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 } } },
+    ["toggle"] = { Source = "mod_switch", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.ogg", "arc9_eft_shared/weapon_light_switcher2.ogg", "arc9_eft_shared/weapon_light_switcher3.ogg"}, t = 0 } } },
+    ["switchsights"] = { Source = "mod_switch", EventTable = { { s = {"arc9_eft_shared/weapon_light_switcher1.ogg", "arc9_eft_shared/weapon_light_switcher2.ogg", "arc9_eft_shared/weapon_light_switcher3.ogg"}, t = 0 } } },
 
 
 
@@ -617,8 +617,8 @@ SWEP.Animations = {
         },
         EventTable = { 
             { s = randspin, t = 0.18 },
-            { s = path .. "toz_boltin.wav", t = 0.27 },
-            { s = path .. "toz_boltout.wav", t = 0.55 },
+            { s = path .. "toz_boltin.ogg", t = 0.27 },
+            { s = path .. "toz_boltout.ogg", t = 0.55 },
             { s = randspin, t = 0.85 },
         },
         EjectAt = 0.6
@@ -627,16 +627,16 @@ SWEP.Animations = {
         Source = "jam_feed", -- jam feed
         EventTable = {
             { s = randspin, t = 0.18 },
-            { s = path .. "toz_boltin.wav", t = 0.28 },
-            { s = path .. "sv98_jam3.wav", t = 0.55 },
+            { s = path .. "toz_boltin.ogg", t = 0.28 },
+            { s = path .. "sv98_jam3.ogg", t = 0.55 },
             { s = randspin, t = 0.76 },
-            { s = path .. "sv98_jam4.wav", t = 1.28 },
+            { s = path .. "sv98_jam4.ogg", t = 1.28 },
             { s = randspin, t = 1.73 },
             { s = randspin, t = 2.17 },
             { s = randspin, t = 2.54 },
-            { s = path .. "saiga_round_out.wav", t = 3.14 },
+            { s = path .. "saiga_round_out.ogg", t = 3.14 },
             { s = randspin, t = 3.96 },
-            { s = path .. "toz_boltout.wav", t = 4.37 },
+            { s = path .. "toz_boltout.ogg", t = 4.37 },
             { s = randspin, t = 5.05 },
         },
         IKTimeLine = {
@@ -651,24 +651,24 @@ SWEP.Animations = {
         Source = "jam_hard", -- jam hard
         EventTable = {
             { s = randspin, t = 0.07 },
-            { s = path .. "sv98_jam2.wav", t = 0.52 },
-            { s = path .. "sv98_jam1.wav", t = 1.12 },
+            { s = path .. "sv98_jam2.ogg", t = 0.52 },
+            { s = path .. "sv98_jam1.ogg", t = 1.12 },
             { s = randspin, t = 1.57 },
             { s = randspin, t = 1.96 },
             { s = randspin, t = 2.73 },
-            { s = path .. "sv98_jam2.wav", t = 3.56 },
+            { s = path .. "sv98_jam2.ogg", t = 3.56 },
             { s = randspin, t = 3.58 },
-            { s = path .. "sv98_jam1.wav", t = 3.94 },
+            { s = path .. "sv98_jam1.ogg", t = 3.94 },
             { s = randspin, t = 4.28 },
             { s = randspin, t = 5.19 },
             { s = randspin, t = 5.67 },
-            { s = path .. "sv98_jam1.wav", t = 5.71 },
+            { s = path .. "sv98_jam1.ogg", t = 5.71 },
             { s = randspin, t = 6.12 },
-            { s = path .. "sv98_jam2.wav", t = 6.13 },
+            { s = path .. "sv98_jam2.ogg", t = 6.13 },
             { s = randspin, t = 6.79 },
-            { s = path .. "sv98_jam5_slideout.wav", t = 6.88 },
-            { s = path .. "toz_boltin.wav", t = 7.23 },
-            { s = path .. "toz_boltout.wav", t = 7.63 },
+            { s = path .. "sv98_jam5_slideout.ogg", t = 6.88 },
+            { s = path .. "toz_boltin.ogg", t = 7.23 },
+            { s = path .. "toz_boltout.ogg", t = 7.63 },
             { s = randspin, t = 8.28 },
         },
         IKTimeLine = {
@@ -690,19 +690,19 @@ SWEP.Animations = {
         Source = "jam_soft", -- jam soft
         EventTable = {
             { s = randspin, t = 0.07 },
-            { s = path .. "sv98_jam2.wav", t = 0.52 },
-            { s = path .. "sv98_jam1.wav", t = 1.12 },
+            { s = path .. "sv98_jam2.ogg", t = 0.52 },
+            { s = path .. "sv98_jam1.ogg", t = 1.12 },
             { s = randspin, t = 1.57 },
             { s = randspin, t = 1.96 },
             { s = randspin, t = 2.73 },
             { s = randspin, t = 3.28 },
             { s = randspin, t = 3.87 },
-            { s = path .. "sv98_jam2.wav", t = 3.88 },
+            { s = path .. "sv98_jam2.ogg", t = 3.88 },
             { s = randspin, t = 4.38 },
-            { s = path .. "sv98_jam1.wav", t = 4.4 },
-            { s = path .. "sv98_jam5_slideout.wav", t = 5.1 },
-            { s = path .. "toz_boltin.wav", t = 5.46 },
-            { s = path .. "toz_boltout.wav", t = 5.87 },
+            { s = path .. "sv98_jam1.ogg", t = 4.4 },
+            { s = path .. "sv98_jam5_slideout.ogg", t = 5.1 },
+            { s = path .. "toz_boltin.ogg", t = 5.46 },
+            { s = path .. "toz_boltout.ogg", t = 5.87 },
             { s = randspin, t = 6.5 },
         },
         IKTimeLine = {
@@ -726,15 +726,15 @@ SWEP.Animations = {
         Source = "jam_shell", -- jam shell
         EventTable = {
             { s = randspin, t = 0.18 },
-            { s = path .. "toz_boltin.wav", t = 0.28 },
-            { s = path .. "sv98_jam3.wav", t = 0.53 },
+            { s = path .. "toz_boltin.ogg", t = 0.28 },
+            { s = path .. "sv98_jam3.ogg", t = 0.53 },
             { s = randspin, t = 0.76 },
-            { s = path .. "sv98_jam4.wav", t = 1.26 },
+            { s = path .. "sv98_jam4.ogg", t = 1.26 },
             { s = randspin, t = 1.74 },
             { s = randspin, t = 2.13 },
-            { s = path .. "saiga_round_out.wav", t = 2.4 },
+            { s = path .. "saiga_round_out.ogg", t = 2.4 },
             { s = randspin, t = 2.42 },
-            { s = path .. "toz_boltout.wav", t = 2.57 },
+            { s = path .. "toz_boltout.ogg", t = 2.57 },
             { s = randspin, t = 3.22 },
         },
         IKTimeLine = {
@@ -759,8 +759,8 @@ SWEP.Animations = {
         },
         EventTable = { 
             { s = randspin, t = 0.18 },
-            { s = path .. "toz_boltin.wav", t = 0.27 },
-            { s = path .. "toz_boltout.wav", t = 0.55 },
+            { s = path .. "toz_boltin.ogg", t = 0.27 },
+            { s = path .. "toz_boltout.ogg", t = 0.55 },
             { s = randspin, t = 0.85 },
         }
     }
