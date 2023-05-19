@@ -150,7 +150,7 @@ SWEP.VisualRecoilPositionBumpUpHipFire = 0.001
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.344 * ARC9.MOAToAcc
+SWEP.Spread = 3.09 * ARC9.MOAToAcc
 SWEP.SpreadAddHipFire = 0.03
 SWEP.SpreadMultMove = 1.5
 SWEP.SpreadAddMove = 0.015
