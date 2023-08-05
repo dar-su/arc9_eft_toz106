@@ -4,7 +4,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Escape From Tarkov"
-SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_sg")
+SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_snip")
 
 SWEP.PrintName = "MP-18"
 
