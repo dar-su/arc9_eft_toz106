@@ -327,8 +327,8 @@ SWEP.ToggleAttSound = "" -- we will have own in sound tables
 
 SWEP.DryFireSound = path .. "mr43_hammer_release.ogg"
 
-SWEP.EnterSightsSound = "arc9_eft_shared/weap_in.ogg"
-SWEP.ExitSightsSound = "arc9_eft_shared/weap_handoff.ogg"
+SWEP.EnterSightsSound = ARC9EFT.ADSRifle
+SWEP.ExitSightsSound = ARC9EFT.ADSRifleOut
 
 -- SWEP.SuppressEmptySuffix = true 
 
@@ -494,7 +494,7 @@ SWEP.EFTErgo = 44
 if ARC9EFTBASE then
     SWEP.AimDownSightsTimeHook = ARC9EFT.ErgoHook or nil
     SWEP.HoldBreathTimeHook = ARC9EFT.ErgoBreathHook or nil
-    SWEP.HookP_TranslateSound = ARC9EFT.ErgoAdsVolume or nil
+    -- SWEP.HookP_TranslateSound = ARC9EFT.ErgoAdsVolume or nil
     SWEP.SpreadHook = ARC9EFT.SpreadBonus or nil
 else
     print("Dum! install arc9 eft shared!!!!!!!!!!!!!!")
