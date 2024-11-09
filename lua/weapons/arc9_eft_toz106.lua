@@ -298,6 +298,10 @@ SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
 
 local path = "weapons/darsu_eft/toz106/"
 
+SWEP.ShootPitchVariation = 0
+SWEP.DistantShootVolume = 0.05
+SWEP.DistantShootVolumeActual = 0.05
+
 SWEP.ShootSound = { path .. "toz_fire_close1.ogg", path .. "toz_fire_close2.ogg" }
 SWEP.ShootSoundIndoor = path .. "toz_fire_indoor_close.ogg"
 SWEP.DistantShootSound = { path .. "toz_fire_distant1.ogg", path .. "toz_fire_distant2.ogg" }
