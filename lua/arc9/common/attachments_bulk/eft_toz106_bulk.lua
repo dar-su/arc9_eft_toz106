@@ -11,7 +11,7 @@ ATT.CompactName = "TOZ106"
 ATT.Icon = Material("entities/eft_toz106_attachments/grip.png", "mips smooth")
 ATT.Description = [[The TOZ 002 pistol grip for the TOZ-106 bolt-action shotgun.]]
 
-ATT.HasStock = true
+ATT.HasGrip = true
 
 ATT.EFTErgoAdd = 3
 ATT.CustomPros = { Ergonomics = "+3" }
@@ -170,6 +170,8 @@ ATT.Icon = Material("entities/eft_toz106_attachments/mts.png", "mips smooth")
 ATT.Description = [[A standard stock for MTs 20-01 hunting rifles, but can be also installed on various different shotguns including the bolt-action TOZ-106.]]
 
 ATT.HasStock = true
+ATT.HasGrip = true
+ATT.HasReciever = true
 
 ATT.EFTErgoAdd = 6
 ATT.CustomPros = { Ergonomics = "+6" }
@@ -226,6 +228,8 @@ ATT.Icon = Material("entities/eft_toz106_attachments/mosin.png", "mips smooth")
 ATT.Description = [[A custom-made stock for the TOZ-106 hunting shotgun, made from the Mosin rifle stock base. It was made by ancient Russian dark magic called "Napiling".]]
 
 ATT.HasStock = true
+ATT.HasGrip = true
+ATT.HasReciever = true
 
 ATT.EFTErgoAdd = 9
 ATT.CustomPros = { Ergonomics = "+9" }
@@ -260,6 +264,8 @@ ATT.Description = [[A standard-issue stock with a folding shoulder piece for the
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
+ATT.HasReciever = true
+
 ATT.EFTErgoAdd = 7
 ATT.CustomPros = { Ergonomics = "+7", ["Recoil while unfolded"] = "-38%" }
 
@@ -286,7 +292,8 @@ ATT.ToggleStats = {
     {
         PrintName = "Unfolded",
         RecoilMult = 0.62,
-        VisualRecoilMult = 0.62
+        VisualRecoilMult = 0.62,
+        HasStock = true
     },
     {
         PrintName = "Folded",
