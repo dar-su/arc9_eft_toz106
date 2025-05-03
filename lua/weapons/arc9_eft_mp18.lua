@@ -5,18 +5,18 @@ SWEP.Spawnable = true
 
 ------------------------- |||           Trivia            ||| -------------------------
 
-SWEP.PrintName = "MP-18"
-SWEP.Description = [[MP-18 is the legendary Soviet single-barreled rifle. This gun behaves perfectly in all weather conditions, no breakdowns or failures have ever been identified.]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_mp18")
+SWEP.Description = "eft_weapon_mp18_desc"
 
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_singleshot")
+SWEP.Class = "eft_class_weapon_singleshot"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_snip")
 
 SWEP.Trivia = {
-    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = "Bergmann",
-    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "7.62x54R",
-    [ARC9:GetPhrase("eft_trivia_act") .. "3"]= ARC9:GetPhrase("eft_trivia_act_blow"),
-    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_ussr"),
-    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "1983"
+    ["eft_trivia_manuf1"] = "eft_trivia_manuf_izhevsk",
+    ["eft_trivia_cal2"] = "eft_trivia_calibr_762x54",
+    ["eft_trivia_act3"]= "eft_trivia_act_break",
+    ["eft_trivia_country4"] = "eft_trivia_country_ussr",
+    ["eft_trivia_year5"] = "1983"
 }
 
 SWEP.StandardPresets = false 

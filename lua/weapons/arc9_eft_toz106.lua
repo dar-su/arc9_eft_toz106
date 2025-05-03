@@ -6,17 +6,17 @@ SWEP.Spawnable = true
 ------------------------- |||           Trivia            ||| -------------------------
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_toz106")
-SWEP.Description = [[A single-barreled 20 gauge hunting shotgun with a sliding breech bolt. Widely known by it vernacular name, the Death of the Chairman, for its compact size.]]
+SWEP.Description = "eft_weapon_toz106_desc"
 
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_boltsg")
+SWEP.Class = "eft_class_weapon_boltsg"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_sg")
 
 SWEP.Trivia = {
-    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = ARC9:GetPhrase("eft_trivia_manuf_tula"),
-    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "20/70 gauge",
-    [ARC9:GetPhrase("eft_trivia_act") .. "3"] = ARC9:GetPhrase("eft_trivia_act_bolt"),
-    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_rus"),
-    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "1993"
+    ["eft_trivia_manuf1"] = "eft_trivia_manuf_tula",
+    ["eft_trivia_cal2"] = "20/70 gauge",
+    ["eft_trivia_act3"] = "eft_trivia_act_bolt",
+    ["eft_trivia_country4"] = "eft_trivia_country_rus",
+    ["eft_trivia_year5"] = "1993"
 }
 
 SWEP.StandardPresets = false 
